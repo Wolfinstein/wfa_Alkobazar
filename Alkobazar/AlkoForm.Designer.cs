@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tab = new System.Windows.Forms.TabControl();
             this.tab_products = new System.Windows.Forms.TabPage();
             this.tab_layout_products = new System.Windows.Forms.TableLayoutPanel();
@@ -45,11 +46,6 @@
             this.label_alcohol_content = new System.Windows.Forms.Label();
             this.text_alcohol_content = new System.Windows.Forms.TextBox();
             this.text_size_in_liters = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.button_add_products = new System.Windows.Forms.Button();
-            this.butt_clear_products = new System.Windows.Forms.Button();
-            this.button_update_product = new System.Windows.Forms.Button();
-            this.button_delete_products = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.button_export_products = new System.Windows.Forms.Button();
             this.button_import_products = new System.Windows.Forms.Button();
@@ -57,7 +53,21 @@
             this.label_price = new System.Windows.Forms.Label();
             this.label_product_description = new System.Windows.Forms.Label();
             this.label_quantity_in_stock = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.button_add_products = new System.Windows.Forms.Button();
+            this.button_clear_products = new System.Windows.Forms.Button();
+            this.button_update_products = new System.Windows.Forms.Button();
+            this.button_delete_products = new System.Windows.Forms.Button();
             this.grid_products = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alcoholcontentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sizeInLitersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityInStockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet = new Alkobazar.model.dataSet();
             this.tab_customers = new System.Windows.Forms.TabPage();
             this.tab_layout_customers = new System.Windows.Forms.TableLayoutPanel();
             this.inputLayout = new System.Windows.Forms.TableLayoutPanel();
@@ -68,14 +78,18 @@
             this.text_phone_number = new System.Windows.Forms.TextBox();
             this.labelPhoneNumber = new System.Windows.Forms.Label();
             this.buttonsLayout2 = new System.Windows.Forms.TableLayoutPanel();
-            this.button_add_customers = new System.Windows.Forms.Button();
             this.button_clear_customers = new System.Windows.Forms.Button();
-            this.button_update_customers = new System.Windows.Forms.Button();
+            this.button_add_customers = new System.Windows.Forms.Button();
             this.button_delete_customers = new System.Windows.Forms.Button();
             this.buttonsLayout1 = new System.Windows.Forms.TableLayoutPanel();
             this.button_export_customers = new System.Windows.Forms.Button();
             this.button_import_customers = new System.Windows.Forms.Button();
             this.grid_customers = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shipmentaddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerphoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tab_employees = new System.Windows.Forms.TabPage();
             this.tab_layout_employees = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -87,9 +101,8 @@
             this.text_lastname = new System.Windows.Forms.TextBox();
             this.text_address = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.button_add_employees = new System.Windows.Forms.Button();
             this.button_clear_employees = new System.Windows.Forms.Button();
-            this.button_update_employees = new System.Windows.Forms.Button();
+            this.button_add_employees = new System.Windows.Forms.Button();
             this.button_delete_employees = new System.Windows.Forms.Button();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.button_export_employees = new System.Windows.Forms.Button();
@@ -98,68 +111,102 @@
             this.label_phone = new System.Windows.Forms.Label();
             this.label_pesel = new System.Windows.Forms.Label();
             this.grid_employees = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.peselDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tab_orders = new System.Windows.Forms.TabPage();
             this.tab_layout_orders = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.dropDownList_employee = new System.Windows.Forms.ComboBox();
+            this.employeesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label_customer_id = new System.Windows.Forms.Label();
             this.label_employee_id = new System.Windows.Forms.Label();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.button_add_orders = new System.Windows.Forms.Button();
-            this.button_clear_orders = new System.Windows.Forms.Button();
-            this.button_update_orders = new System.Windows.Forms.Button();
             this.button_delete_orders = new System.Windows.Forms.Button();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.button_invoice = new System.Windows.Forms.Button();
             this.label_deadline = new System.Windows.Forms.Label();
             this.dropDownList_customer = new System.Windows.Forms.ComboBox();
+            this.customersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.datePicker_deadline = new System.Windows.Forms.DateTimePicker();
             this.grid_orders = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customeridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createtimestampDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deadlineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ordersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tab_order_items = new System.Windows.Forms.TabPage();
             this.tab_layout_orders_item = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.dropDownList_product = new System.Windows.Forms.ComboBox();
+            this.productsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label_order = new System.Windows.Forms.Label();
             this.label_product = new System.Windows.Forms.Label();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.button_add_items = new System.Windows.Forms.Button();
-            this.button_clear_items = new System.Windows.Forms.Button();
-            this.button_update_items = new System.Windows.Forms.Button();
             this.button_delete_items = new System.Windows.Forms.Button();
             this.label_quantity = new System.Windows.Forms.Label();
             this.dropDownList_order = new System.Windows.Forms.ComboBox();
+            this.ordersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.text_order_quantity = new System.Windows.Forms.TextBox();
             this.grid_order_items = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderquantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderitemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productsTableAdapter = new Alkobazar.model.dataSetTableAdapters.productsTableAdapter();
+            this.customersTableAdapter = new Alkobazar.model.dataSetTableAdapters.customersTableAdapter();
+            this.employeesTableAdapter = new Alkobazar.model.dataSetTableAdapters.employeesTableAdapter();
+            this.ordersTableAdapter = new Alkobazar.model.dataSetTableAdapters.ordersTableAdapter();
+            this.order_itemsTableAdapter = new Alkobazar.model.dataSetTableAdapters.order_itemsTableAdapter();
+            this.button_refresh_products = new System.Windows.Forms.Button();
             this.tab.SuspendLayout();
             this.tab_products.SuspendLayout();
             this.tab_layout_products.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_products)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
             this.tab_customers.SuspendLayout();
             this.tab_layout_customers.SuspendLayout();
             this.inputLayout.SuspendLayout();
             this.buttonsLayout2.SuspendLayout();
             this.buttonsLayout1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_customers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
             this.tab_employees.SuspendLayout();
             this.tab_layout_employees.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_employees)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
             this.tab_orders.SuspendLayout();
             this.tab_layout_orders.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource1)).BeginInit();
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_orders)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
             this.tab_order_items.SuspendLayout();
             this.tab_layout_orders_item.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource1)).BeginInit();
             this.tableLayoutPanel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_order_items)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderitemsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tab
@@ -218,12 +265,12 @@
             this.tableLayoutPanel1.Controls.Add(this.label_alcohol_content, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.text_alcohol_content, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.text_size_in_liters, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.label_size_in_liters, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label_price, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label_product_description, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label_quantity_in_stock, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 6);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(891, 4);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -319,102 +366,37 @@
             this.text_size_in_liters.Size = new System.Drawing.Size(244, 22);
             this.text_size_in_liters.TabIndex = 7;
             // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.button_add_products, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.butt_clear_products, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.button_update_product, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button_delete_products, 0, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(161, 208);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(244, 123);
-            this.tableLayoutPanel2.TabIndex = 8;
-            // 
-            // button_add_products
-            // 
-            this.button_add_products.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_add_products.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_add_products.Location = new System.Drawing.Point(4, 4);
-            this.button_add_products.Margin = new System.Windows.Forms.Padding(4);
-            this.button_add_products.Name = "button_add_products";
-            this.button_add_products.Size = new System.Drawing.Size(114, 53);
-            this.button_add_products.TabIndex = 8;
-            this.button_add_products.Text = "Add";
-            this.button_add_products.UseVisualStyleBackColor = true;
-            // 
-            // butt_clear_products
-            // 
-            this.butt_clear_products.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.butt_clear_products.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.butt_clear_products.Location = new System.Drawing.Point(126, 65);
-            this.butt_clear_products.Margin = new System.Windows.Forms.Padding(4);
-            this.butt_clear_products.Name = "butt_clear_products";
-            this.butt_clear_products.Size = new System.Drawing.Size(114, 54);
-            this.butt_clear_products.TabIndex = 13;
-            this.butt_clear_products.Text = "Clear fields";
-            this.butt_clear_products.UseVisualStyleBackColor = true;
-            // 
-            // button_update_product
-            // 
-            this.button_update_product.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_update_product.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_update_product.Location = new System.Drawing.Point(126, 4);
-            this.button_update_product.Margin = new System.Windows.Forms.Padding(4);
-            this.button_update_product.Name = "button_update_product";
-            this.button_update_product.Size = new System.Drawing.Size(114, 53);
-            this.button_update_product.TabIndex = 12;
-            this.button_update_product.Text = "Update";
-            this.button_update_product.UseVisualStyleBackColor = true;
-            // 
-            // button_delete_products
-            // 
-            this.button_delete_products.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_delete_products.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_delete_products.Location = new System.Drawing.Point(4, 65);
-            this.button_delete_products.Margin = new System.Windows.Forms.Padding(4);
-            this.button_delete_products.Name = "button_delete_products";
-            this.button_delete_products.Size = new System.Drawing.Size(114, 54);
-            this.button_delete_products.TabIndex = 10;
-            this.button_delete_products.Text = "Delete";
-            this.button_delete_products.UseVisualStyleBackColor = true;
-            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.button_refresh_products, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.button_export_products, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.button_import_products, 0, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 208);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(149, 123);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 68F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(149, 197);
             this.tableLayoutPanel3.TabIndex = 9;
             // 
             // button_export_products
             // 
             this.button_export_products.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_export_products.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_export_products.Location = new System.Drawing.Point(4, 61);
+            this.button_export_products.Location = new System.Drawing.Point(4, 71);
             this.button_export_products.Margin = new System.Windows.Forms.Padding(4);
             this.button_export_products.Name = "button_export_products";
-            this.button_export_products.Size = new System.Drawing.Size(141, 58);
+            this.button_export_products.Size = new System.Drawing.Size(141, 60);
             this.button_export_products.TabIndex = 0;
             this.button_export_products.Text = "EXPORT";
             this.button_export_products.UseVisualStyleBackColor = true;
+            this.button_export_products.Click += new System.EventHandler(this.button_export_products_Click);
             // 
             // button_import_products
             // 
@@ -423,10 +405,11 @@
             this.button_import_products.Location = new System.Drawing.Point(4, 4);
             this.button_import_products.Margin = new System.Windows.Forms.Padding(4);
             this.button_import_products.Name = "button_import_products";
-            this.button_import_products.Size = new System.Drawing.Size(141, 49);
+            this.button_import_products.Size = new System.Drawing.Size(141, 59);
             this.button_import_products.TabIndex = 1;
             this.button_import_products.Text = "IMPORT";
             this.button_import_products.UseVisualStyleBackColor = true;
+            this.button_import_products.Click += new System.EventHandler(this.button_import_products_Click);
             // 
             // label_size_in_liters
             // 
@@ -480,24 +463,166 @@
             this.label_quantity_in_stock.TabIndex = 13;
             this.label_quantity_in_stock.Text = "Quantity in stock";
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.button_add_products, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button_clear_products, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.button_update_products, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button_delete_products, 0, 1);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(161, 208);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(244, 123);
+            this.tableLayoutPanel2.TabIndex = 17;
+            // 
+            // button_add_products
+            // 
+            this.button_add_products.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_add_products.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button_add_products.Location = new System.Drawing.Point(4, 4);
+            this.button_add_products.Margin = new System.Windows.Forms.Padding(4);
+            this.button_add_products.Name = "button_add_products";
+            this.button_add_products.Size = new System.Drawing.Size(114, 53);
+            this.button_add_products.TabIndex = 8;
+            this.button_add_products.Text = "Add";
+            this.button_add_products.UseVisualStyleBackColor = true;
+            this.button_add_products.Click += new System.EventHandler(this.button_add_products_Click);
+            // 
+            // button_clear_products
+            // 
+            this.button_clear_products.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_clear_products.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button_clear_products.Location = new System.Drawing.Point(126, 65);
+            this.button_clear_products.Margin = new System.Windows.Forms.Padding(4);
+            this.button_clear_products.Name = "button_clear_products";
+            this.button_clear_products.Size = new System.Drawing.Size(114, 54);
+            this.button_clear_products.TabIndex = 13;
+            this.button_clear_products.Text = "Clear fields";
+            this.button_clear_products.UseVisualStyleBackColor = true;
+            this.button_clear_products.Click += new System.EventHandler(this.button_clear_products_Click);
+            // 
+            // button_update_products
+            // 
+            this.button_update_products.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_update_products.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button_update_products.Location = new System.Drawing.Point(126, 4);
+            this.button_update_products.Margin = new System.Windows.Forms.Padding(4);
+            this.button_update_products.Name = "button_update_products";
+            this.button_update_products.Size = new System.Drawing.Size(114, 53);
+            this.button_update_products.TabIndex = 12;
+            this.button_update_products.Text = "Update";
+            this.button_update_products.UseVisualStyleBackColor = true;
+            this.button_update_products.Click += new System.EventHandler(this.button_update_products_Click);
+            // 
+            // button_delete_products
+            // 
+            this.button_delete_products.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_delete_products.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button_delete_products.Location = new System.Drawing.Point(4, 65);
+            this.button_delete_products.Margin = new System.Windows.Forms.Padding(4);
+            this.button_delete_products.Name = "button_delete_products";
+            this.button_delete_products.Size = new System.Drawing.Size(114, 54);
+            this.button_delete_products.TabIndex = 10;
+            this.button_delete_products.Text = "Delete";
+            this.button_delete_products.UseVisualStyleBackColor = true;
+            this.button_delete_products.Click += new System.EventHandler(this.button_delete_products_Click);
+            // 
             // grid_products
             // 
             this.grid_products.AllowUserToAddRows = false;
             this.grid_products.AllowUserToDeleteRows = false;
+            this.grid_products.AutoGenerateColumns = false;
             this.grid_products.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid_products.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.grid_products.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grid_products.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_products.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.alcoholcontentDataGridViewTextBoxColumn,
+            this.sizeInLitersDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn,
+            this.quantityInStockDataGridViewTextBoxColumn});
+            this.grid_products.DataSource = this.productsBindingSource;
             this.grid_products.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grid_products.Location = new System.Drawing.Point(4, 4);
             this.grid_products.Margin = new System.Windows.Forms.Padding(4);
             this.grid_products.Name = "grid_products";
             this.grid_products.ReadOnly = true;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid_products.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid_products.RowsDefaultCellStyle = dataGridViewCellStyle11;
             this.grid_products.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid_products.Size = new System.Drawing.Size(879, 678);
             this.grid_products.TabIndex = 12;
+            this.grid_products.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_products_CellContentClick);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // alcoholcontentDataGridViewTextBoxColumn
+            // 
+            this.alcoholcontentDataGridViewTextBoxColumn.DataPropertyName = "alcohol_content";
+            this.alcoholcontentDataGridViewTextBoxColumn.HeaderText = "alcohol_content";
+            this.alcoholcontentDataGridViewTextBoxColumn.Name = "alcoholcontentDataGridViewTextBoxColumn";
+            this.alcoholcontentDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sizeInLitersDataGridViewTextBoxColumn
+            // 
+            this.sizeInLitersDataGridViewTextBoxColumn.DataPropertyName = "sizeInLiters";
+            this.sizeInLitersDataGridViewTextBoxColumn.HeaderText = "sizeInLiters";
+            this.sizeInLitersDataGridViewTextBoxColumn.Name = "sizeInLitersDataGridViewTextBoxColumn";
+            this.sizeInLitersDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "price";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "description";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quantityInStockDataGridViewTextBoxColumn
+            // 
+            this.quantityInStockDataGridViewTextBoxColumn.DataPropertyName = "quantityInStock";
+            this.quantityInStockDataGridViewTextBoxColumn.HeaderText = "quantityInStock";
+            this.quantityInStockDataGridViewTextBoxColumn.Name = "quantityInStockDataGridViewTextBoxColumn";
+            this.quantityInStockDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productsBindingSource
+            // 
+            this.productsBindingSource.DataMember = "products";
+            this.productsBindingSource.DataSource = this.dataSet;
+            // 
+            // dataSet
+            // 
+            this.dataSet.DataSetName = "dataSet";
+            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tab_customers
             // 
@@ -622,21 +747,32 @@
             // 
             this.buttonsLayout2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonsLayout2.ColumnCount = 2;
+            this.buttonsLayout2.ColumnCount = 1;
             this.buttonsLayout2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.buttonsLayout2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.buttonsLayout2.Controls.Add(this.button_clear_customers, 0, 2);
             this.buttonsLayout2.Controls.Add(this.button_add_customers, 0, 0);
-            this.buttonsLayout2.Controls.Add(this.button_clear_customers, 1, 1);
-            this.buttonsLayout2.Controls.Add(this.button_update_customers, 1, 0);
             this.buttonsLayout2.Controls.Add(this.button_delete_customers, 0, 1);
             this.buttonsLayout2.Location = new System.Drawing.Point(161, 124);
             this.buttonsLayout2.Margin = new System.Windows.Forms.Padding(4);
             this.buttonsLayout2.Name = "buttonsLayout2";
-            this.buttonsLayout2.RowCount = 2;
+            this.buttonsLayout2.RowCount = 3;
             this.buttonsLayout2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.buttonsLayout2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.buttonsLayout2.Size = new System.Drawing.Size(244, 123);
+            this.buttonsLayout2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
+            this.buttonsLayout2.Size = new System.Drawing.Size(244, 179);
             this.buttonsLayout2.TabIndex = 8;
+            // 
+            // button_clear_customers
+            // 
+            this.button_clear_customers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_clear_customers.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button_clear_customers.Location = new System.Drawing.Point(4, 126);
+            this.button_clear_customers.Margin = new System.Windows.Forms.Padding(4);
+            this.button_clear_customers.Name = "button_clear_customers";
+            this.button_clear_customers.Size = new System.Drawing.Size(236, 49);
+            this.button_clear_customers.TabIndex = 14;
+            this.button_clear_customers.Text = "Clear fields";
+            this.button_clear_customers.UseVisualStyleBackColor = true;
             // 
             // button_add_customers
             // 
@@ -645,34 +781,10 @@
             this.button_add_customers.Location = new System.Drawing.Point(4, 4);
             this.button_add_customers.Margin = new System.Windows.Forms.Padding(4);
             this.button_add_customers.Name = "button_add_customers";
-            this.button_add_customers.Size = new System.Drawing.Size(114, 53);
+            this.button_add_customers.Size = new System.Drawing.Size(236, 53);
             this.button_add_customers.TabIndex = 8;
             this.button_add_customers.Text = "Add";
             this.button_add_customers.UseVisualStyleBackColor = true;
-            // 
-            // button_clear_customers
-            // 
-            this.button_clear_customers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_clear_customers.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_clear_customers.Location = new System.Drawing.Point(126, 65);
-            this.button_clear_customers.Margin = new System.Windows.Forms.Padding(4);
-            this.button_clear_customers.Name = "button_clear_customers";
-            this.button_clear_customers.Size = new System.Drawing.Size(114, 54);
-            this.button_clear_customers.TabIndex = 13;
-            this.button_clear_customers.Text = "Clear fields";
-            this.button_clear_customers.UseVisualStyleBackColor = true;
-            // 
-            // button_update_customers
-            // 
-            this.button_update_customers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_update_customers.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_update_customers.Location = new System.Drawing.Point(126, 4);
-            this.button_update_customers.Margin = new System.Windows.Forms.Padding(4);
-            this.button_update_customers.Name = "button_update_customers";
-            this.button_update_customers.Size = new System.Drawing.Size(114, 53);
-            this.button_update_customers.TabIndex = 12;
-            this.button_update_customers.Text = "Update";
-            this.button_update_customers.UseVisualStyleBackColor = true;
             // 
             // button_delete_customers
             // 
@@ -681,7 +793,7 @@
             this.button_delete_customers.Location = new System.Drawing.Point(4, 65);
             this.button_delete_customers.Margin = new System.Windows.Forms.Padding(4);
             this.button_delete_customers.Name = "button_delete_customers";
-            this.button_delete_customers.Size = new System.Drawing.Size(114, 54);
+            this.button_delete_customers.Size = new System.Drawing.Size(236, 53);
             this.button_delete_customers.TabIndex = 10;
             this.button_delete_customers.Text = "Delete";
             this.button_delete_customers.UseVisualStyleBackColor = true;
@@ -731,20 +843,60 @@
             // 
             this.grid_customers.AllowUserToAddRows = false;
             this.grid_customers.AllowUserToDeleteRows = false;
+            this.grid_customers.AutoGenerateColumns = false;
             this.grid_customers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid_customers.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.grid_customers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grid_customers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_customers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn1,
+            this.companynameDataGridViewTextBoxColumn,
+            this.shipmentaddressDataGridViewTextBoxColumn,
+            this.customerphoneDataGridViewTextBoxColumn});
+            this.grid_customers.DataSource = this.customersBindingSource;
             this.grid_customers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grid_customers.Location = new System.Drawing.Point(4, 4);
             this.grid_customers.Margin = new System.Windows.Forms.Padding(4);
             this.grid_customers.Name = "grid_customers";
             this.grid_customers.ReadOnly = true;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid_customers.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid_customers.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.grid_customers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid_customers.Size = new System.Drawing.Size(879, 678);
             this.grid_customers.TabIndex = 13;
+            // 
+            // idDataGridViewTextBoxColumn1
+            // 
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // companynameDataGridViewTextBoxColumn
+            // 
+            this.companynameDataGridViewTextBoxColumn.DataPropertyName = "company_name";
+            this.companynameDataGridViewTextBoxColumn.HeaderText = "company_name";
+            this.companynameDataGridViewTextBoxColumn.Name = "companynameDataGridViewTextBoxColumn";
+            this.companynameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // shipmentaddressDataGridViewTextBoxColumn
+            // 
+            this.shipmentaddressDataGridViewTextBoxColumn.DataPropertyName = "shipment_address";
+            this.shipmentaddressDataGridViewTextBoxColumn.HeaderText = "shipment_address";
+            this.shipmentaddressDataGridViewTextBoxColumn.Name = "shipmentaddressDataGridViewTextBoxColumn";
+            this.shipmentaddressDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // customerphoneDataGridViewTextBoxColumn
+            // 
+            this.customerphoneDataGridViewTextBoxColumn.DataPropertyName = "customer_phone";
+            this.customerphoneDataGridViewTextBoxColumn.HeaderText = "customer_phone";
+            this.customerphoneDataGridViewTextBoxColumn.Name = "customerphoneDataGridViewTextBoxColumn";
+            this.customerphoneDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // customersBindingSource
+            // 
+            this.customersBindingSource.DataMember = "customers";
+            this.customersBindingSource.DataSource = this.dataSet;
             // 
             // tab_employees
             // 
@@ -881,21 +1033,32 @@
             // 
             this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.22951F));
+            this.tableLayoutPanel5.Controls.Add(this.button_clear_employees, 0, 2);
             this.tableLayoutPanel5.Controls.Add(this.button_add_employees, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.button_clear_employees, 1, 1);
-            this.tableLayoutPanel5.Controls.Add(this.button_update_employees, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.button_delete_employees, 0, 1);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(161, 172);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 2;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(244, 123);
+            this.tableLayoutPanel5.RowCount = 3;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(244, 182);
             this.tableLayoutPanel5.TabIndex = 8;
+            // 
+            // button_clear_employees
+            // 
+            this.button_clear_employees.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_clear_employees.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button_clear_employees.Location = new System.Drawing.Point(4, 126);
+            this.button_clear_employees.Margin = new System.Windows.Forms.Padding(4);
+            this.button_clear_employees.Name = "button_clear_employees";
+            this.button_clear_employees.Size = new System.Drawing.Size(236, 52);
+            this.button_clear_employees.TabIndex = 14;
+            this.button_clear_employees.Text = "Clear fields";
+            this.button_clear_employees.UseVisualStyleBackColor = true;
             // 
             // button_add_employees
             // 
@@ -904,34 +1067,10 @@
             this.button_add_employees.Location = new System.Drawing.Point(4, 4);
             this.button_add_employees.Margin = new System.Windows.Forms.Padding(4);
             this.button_add_employees.Name = "button_add_employees";
-            this.button_add_employees.Size = new System.Drawing.Size(114, 53);
+            this.button_add_employees.Size = new System.Drawing.Size(236, 53);
             this.button_add_employees.TabIndex = 8;
             this.button_add_employees.Text = "Add";
             this.button_add_employees.UseVisualStyleBackColor = true;
-            // 
-            // button_clear_employees
-            // 
-            this.button_clear_employees.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_clear_employees.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_clear_employees.Location = new System.Drawing.Point(126, 65);
-            this.button_clear_employees.Margin = new System.Windows.Forms.Padding(4);
-            this.button_clear_employees.Name = "button_clear_employees";
-            this.button_clear_employees.Size = new System.Drawing.Size(114, 54);
-            this.button_clear_employees.TabIndex = 13;
-            this.button_clear_employees.Text = "Clear fields";
-            this.button_clear_employees.UseVisualStyleBackColor = true;
-            // 
-            // button_update_employees
-            // 
-            this.button_update_employees.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_update_employees.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_update_employees.Location = new System.Drawing.Point(126, 4);
-            this.button_update_employees.Margin = new System.Windows.Forms.Padding(4);
-            this.button_update_employees.Name = "button_update_employees";
-            this.button_update_employees.Size = new System.Drawing.Size(114, 53);
-            this.button_update_employees.TabIndex = 12;
-            this.button_update_employees.Text = "Update";
-            this.button_update_employees.UseVisualStyleBackColor = true;
             // 
             // button_delete_employees
             // 
@@ -940,7 +1079,7 @@
             this.button_delete_employees.Location = new System.Drawing.Point(4, 65);
             this.button_delete_employees.Margin = new System.Windows.Forms.Padding(4);
             this.button_delete_employees.Name = "button_delete_employees";
-            this.button_delete_employees.Size = new System.Drawing.Size(114, 54);
+            this.button_delete_employees.Size = new System.Drawing.Size(236, 53);
             this.button_delete_employees.TabIndex = 10;
             this.button_delete_employees.Text = "Delete";
             this.button_delete_employees.UseVisualStyleBackColor = true;
@@ -1029,20 +1168,76 @@
             // 
             this.grid_employees.AllowUserToAddRows = false;
             this.grid_employees.AllowUserToDeleteRows = false;
+            this.grid_employees.AutoGenerateColumns = false;
             this.grid_employees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid_employees.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.grid_employees.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grid_employees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_employees.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn2,
+            this.firstnameDataGridViewTextBoxColumn,
+            this.lastnameDataGridViewTextBoxColumn,
+            this.addressDataGridViewTextBoxColumn,
+            this.phoneDataGridViewTextBoxColumn,
+            this.peselDataGridViewTextBoxColumn});
+            this.grid_employees.DataSource = this.employeesBindingSource;
             this.grid_employees.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grid_employees.Location = new System.Drawing.Point(4, 4);
             this.grid_employees.Margin = new System.Windows.Forms.Padding(4);
             this.grid_employees.Name = "grid_employees";
             this.grid_employees.ReadOnly = true;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid_employees.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid_employees.RowsDefaultCellStyle = dataGridViewCellStyle13;
             this.grid_employees.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid_employees.Size = new System.Drawing.Size(879, 678);
             this.grid_employees.TabIndex = 13;
+            // 
+            // idDataGridViewTextBoxColumn2
+            // 
+            this.idDataGridViewTextBoxColumn2.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn2.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
+            this.idDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // firstnameDataGridViewTextBoxColumn
+            // 
+            this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "firstname";
+            this.firstnameDataGridViewTextBoxColumn.HeaderText = "firstname";
+            this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
+            this.firstnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lastnameDataGridViewTextBoxColumn
+            // 
+            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "lastname";
+            this.lastnameDataGridViewTextBoxColumn.HeaderText = "lastname";
+            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
+            this.lastnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // phoneDataGridViewTextBoxColumn
+            // 
+            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "phone";
+            this.phoneDataGridViewTextBoxColumn.HeaderText = "phone";
+            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            this.phoneDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // peselDataGridViewTextBoxColumn
+            // 
+            this.peselDataGridViewTextBoxColumn.DataPropertyName = "pesel";
+            this.peselDataGridViewTextBoxColumn.HeaderText = "pesel";
+            this.peselDataGridViewTextBoxColumn.Name = "peselDataGridViewTextBoxColumn";
+            this.peselDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // employeesBindingSource
+            // 
+            this.employeesBindingSource.DataMember = "employees";
+            this.employeesBindingSource.DataSource = this.dataSet;
             // 
             // tab_orders
             // 
@@ -1100,6 +1295,7 @@
             // 
             // dropDownList_employee
             // 
+            this.dropDownList_employee.DataSource = this.employeesBindingSource1;
             this.dropDownList_employee.DisplayMember = "pesel";
             this.dropDownList_employee.FormattingEnabled = true;
             this.dropDownList_employee.Location = new System.Drawing.Point(160, 38);
@@ -1107,6 +1303,11 @@
             this.dropDownList_employee.Size = new System.Drawing.Size(246, 24);
             this.dropDownList_employee.TabIndex = 14;
             this.dropDownList_employee.ValueMember = "id";
+            // 
+            // employeesBindingSource1
+            // 
+            this.employeesBindingSource1.DataMember = "employees";
+            this.employeesBindingSource1.DataSource = this.dataSet;
             // 
             // label_customer_id
             // 
@@ -1138,12 +1339,10 @@
             // 
             this.tableLayoutPanel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel8.ColumnCount = 2;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.ColumnCount = 1;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel8.Controls.Add(this.button_add_orders, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.button_clear_orders, 1, 1);
-            this.tableLayoutPanel8.Controls.Add(this.button_update_orders, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.button_delete_orders, 0, 1);
             this.tableLayoutPanel8.Location = new System.Drawing.Point(161, 107);
             this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(4);
@@ -1161,34 +1360,10 @@
             this.button_add_orders.Location = new System.Drawing.Point(4, 4);
             this.button_add_orders.Margin = new System.Windows.Forms.Padding(4);
             this.button_add_orders.Name = "button_add_orders";
-            this.button_add_orders.Size = new System.Drawing.Size(114, 53);
+            this.button_add_orders.Size = new System.Drawing.Size(236, 53);
             this.button_add_orders.TabIndex = 8;
             this.button_add_orders.Text = "Add";
             this.button_add_orders.UseVisualStyleBackColor = true;
-            // 
-            // button_clear_orders
-            // 
-            this.button_clear_orders.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_clear_orders.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_clear_orders.Location = new System.Drawing.Point(126, 65);
-            this.button_clear_orders.Margin = new System.Windows.Forms.Padding(4);
-            this.button_clear_orders.Name = "button_clear_orders";
-            this.button_clear_orders.Size = new System.Drawing.Size(114, 54);
-            this.button_clear_orders.TabIndex = 13;
-            this.button_clear_orders.Text = "Clear fields";
-            this.button_clear_orders.UseVisualStyleBackColor = true;
-            // 
-            // button_update_orders
-            // 
-            this.button_update_orders.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_update_orders.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_update_orders.Location = new System.Drawing.Point(126, 4);
-            this.button_update_orders.Margin = new System.Windows.Forms.Padding(4);
-            this.button_update_orders.Name = "button_update_orders";
-            this.button_update_orders.Size = new System.Drawing.Size(114, 53);
-            this.button_update_orders.TabIndex = 12;
-            this.button_update_orders.Text = "Update";
-            this.button_update_orders.UseVisualStyleBackColor = true;
             // 
             // button_delete_orders
             // 
@@ -1197,7 +1372,7 @@
             this.button_delete_orders.Location = new System.Drawing.Point(4, 65);
             this.button_delete_orders.Margin = new System.Windows.Forms.Padding(4);
             this.button_delete_orders.Name = "button_delete_orders";
-            this.button_delete_orders.Size = new System.Drawing.Size(114, 54);
+            this.button_delete_orders.Size = new System.Drawing.Size(236, 54);
             this.button_delete_orders.TabIndex = 10;
             this.button_delete_orders.Text = "Delete";
             this.button_delete_orders.UseVisualStyleBackColor = true;
@@ -1244,6 +1419,7 @@
             // 
             // dropDownList_customer
             // 
+            this.dropDownList_customer.DataSource = this.customersBindingSource1;
             this.dropDownList_customer.DisplayMember = "company_name";
             this.dropDownList_customer.FormattingEnabled = true;
             this.dropDownList_customer.Location = new System.Drawing.Point(160, 3);
@@ -1251,6 +1427,11 @@
             this.dropDownList_customer.Size = new System.Drawing.Size(246, 24);
             this.dropDownList_customer.TabIndex = 13;
             this.dropDownList_customer.ValueMember = "id";
+            // 
+            // customersBindingSource1
+            // 
+            this.customersBindingSource1.DataMember = "customers";
+            this.customersBindingSource1.DataSource = this.dataSet;
             // 
             // datePicker_deadline
             // 
@@ -1263,20 +1444,68 @@
             // 
             this.grid_orders.AllowUserToAddRows = false;
             this.grid_orders.AllowUserToDeleteRows = false;
+            this.grid_orders.AutoGenerateColumns = false;
             this.grid_orders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid_orders.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.grid_orders.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grid_orders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_orders.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn3,
+            this.customeridDataGridViewTextBoxColumn,
+            this.employeeidDataGridViewTextBoxColumn,
+            this.createtimestampDataGridViewTextBoxColumn,
+            this.deadlineDataGridViewTextBoxColumn});
+            this.grid_orders.DataSource = this.ordersBindingSource;
             this.grid_orders.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grid_orders.Location = new System.Drawing.Point(4, 4);
             this.grid_orders.Margin = new System.Windows.Forms.Padding(4);
             this.grid_orders.Name = "grid_orders";
             this.grid_orders.ReadOnly = true;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid_orders.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid_orders.RowsDefaultCellStyle = dataGridViewCellStyle14;
             this.grid_orders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid_orders.Size = new System.Drawing.Size(879, 678);
             this.grid_orders.TabIndex = 13;
+            // 
+            // idDataGridViewTextBoxColumn3
+            // 
+            this.idDataGridViewTextBoxColumn3.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn3.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn3.Name = "idDataGridViewTextBoxColumn3";
+            this.idDataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // customeridDataGridViewTextBoxColumn
+            // 
+            this.customeridDataGridViewTextBoxColumn.DataPropertyName = "customer_id";
+            this.customeridDataGridViewTextBoxColumn.HeaderText = "customer_id";
+            this.customeridDataGridViewTextBoxColumn.Name = "customeridDataGridViewTextBoxColumn";
+            this.customeridDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // employeeidDataGridViewTextBoxColumn
+            // 
+            this.employeeidDataGridViewTextBoxColumn.DataPropertyName = "employee_id";
+            this.employeeidDataGridViewTextBoxColumn.HeaderText = "employee_id";
+            this.employeeidDataGridViewTextBoxColumn.Name = "employeeidDataGridViewTextBoxColumn";
+            this.employeeidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // createtimestampDataGridViewTextBoxColumn
+            // 
+            this.createtimestampDataGridViewTextBoxColumn.DataPropertyName = "create_timestamp";
+            this.createtimestampDataGridViewTextBoxColumn.HeaderText = "create_timestamp";
+            this.createtimestampDataGridViewTextBoxColumn.Name = "createtimestampDataGridViewTextBoxColumn";
+            this.createtimestampDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // deadlineDataGridViewTextBoxColumn
+            // 
+            this.deadlineDataGridViewTextBoxColumn.DataPropertyName = "deadline";
+            this.deadlineDataGridViewTextBoxColumn.HeaderText = "deadline";
+            this.deadlineDataGridViewTextBoxColumn.Name = "deadlineDataGridViewTextBoxColumn";
+            this.deadlineDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ordersBindingSource
+            // 
+            this.ordersBindingSource.DataMember = "orders";
+            this.ordersBindingSource.DataSource = this.dataSet;
             // 
             // tab_order_items
             // 
@@ -1333,6 +1562,7 @@
             // 
             // dropDownList_product
             // 
+            this.dropDownList_product.DataSource = this.productsBindingSource1;
             this.dropDownList_product.DisplayMember = "name";
             this.dropDownList_product.FormattingEnabled = true;
             this.dropDownList_product.Location = new System.Drawing.Point(160, 38);
@@ -1340,6 +1570,11 @@
             this.dropDownList_product.Size = new System.Drawing.Size(246, 24);
             this.dropDownList_product.TabIndex = 14;
             this.dropDownList_product.ValueMember = "id";
+            // 
+            // productsBindingSource1
+            // 
+            this.productsBindingSource1.DataMember = "products";
+            this.productsBindingSource1.DataSource = this.dataSet;
             // 
             // label_order
             // 
@@ -1371,12 +1606,10 @@
             // 
             this.tableLayoutPanel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel11.ColumnCount = 2;
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.ColumnCount = 1;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel11.Controls.Add(this.button_add_items, 0, 0);
-            this.tableLayoutPanel11.Controls.Add(this.button_clear_items, 1, 1);
-            this.tableLayoutPanel11.Controls.Add(this.button_update_items, 1, 0);
             this.tableLayoutPanel11.Controls.Add(this.button_delete_items, 0, 1);
             this.tableLayoutPanel11.Location = new System.Drawing.Point(161, 107);
             this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(4);
@@ -1394,34 +1627,10 @@
             this.button_add_items.Location = new System.Drawing.Point(4, 4);
             this.button_add_items.Margin = new System.Windows.Forms.Padding(4);
             this.button_add_items.Name = "button_add_items";
-            this.button_add_items.Size = new System.Drawing.Size(114, 53);
+            this.button_add_items.Size = new System.Drawing.Size(236, 53);
             this.button_add_items.TabIndex = 8;
             this.button_add_items.Text = "Add";
             this.button_add_items.UseVisualStyleBackColor = true;
-            // 
-            // button_clear_items
-            // 
-            this.button_clear_items.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_clear_items.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_clear_items.Location = new System.Drawing.Point(126, 65);
-            this.button_clear_items.Margin = new System.Windows.Forms.Padding(4);
-            this.button_clear_items.Name = "button_clear_items";
-            this.button_clear_items.Size = new System.Drawing.Size(114, 54);
-            this.button_clear_items.TabIndex = 13;
-            this.button_clear_items.Text = "Clear fields";
-            this.button_clear_items.UseVisualStyleBackColor = true;
-            // 
-            // button_update_items
-            // 
-            this.button_update_items.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_update_items.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_update_items.Location = new System.Drawing.Point(126, 4);
-            this.button_update_items.Margin = new System.Windows.Forms.Padding(4);
-            this.button_update_items.Name = "button_update_items";
-            this.button_update_items.Size = new System.Drawing.Size(114, 53);
-            this.button_update_items.TabIndex = 12;
-            this.button_update_items.Text = "Update";
-            this.button_update_items.UseVisualStyleBackColor = true;
             // 
             // button_delete_items
             // 
@@ -1430,7 +1639,7 @@
             this.button_delete_items.Location = new System.Drawing.Point(4, 65);
             this.button_delete_items.Margin = new System.Windows.Forms.Padding(4);
             this.button_delete_items.Name = "button_delete_items";
-            this.button_delete_items.Size = new System.Drawing.Size(114, 54);
+            this.button_delete_items.Size = new System.Drawing.Size(236, 54);
             this.button_delete_items.TabIndex = 10;
             this.button_delete_items.Text = "Delete";
             this.button_delete_items.UseVisualStyleBackColor = true;
@@ -1450,6 +1659,7 @@
             // 
             // dropDownList_order
             // 
+            this.dropDownList_order.DataSource = this.ordersBindingSource1;
             this.dropDownList_order.DisplayMember = "id";
             this.dropDownList_order.FormattingEnabled = true;
             this.dropDownList_order.Location = new System.Drawing.Point(160, 3);
@@ -1457,6 +1667,11 @@
             this.dropDownList_order.Size = new System.Drawing.Size(246, 24);
             this.dropDownList_order.TabIndex = 13;
             this.dropDownList_order.ValueMember = "id";
+            // 
+            // ordersBindingSource1
+            // 
+            this.ordersBindingSource1.DataMember = "orders";
+            this.ordersBindingSource1.DataSource = this.dataSet;
             // 
             // text_order_quantity
             // 
@@ -1469,37 +1684,113 @@
             // 
             this.grid_order_items.AllowUserToAddRows = false;
             this.grid_order_items.AllowUserToDeleteRows = false;
+            this.grid_order_items.AutoGenerateColumns = false;
             this.grid_order_items.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid_order_items.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.grid_order_items.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grid_order_items.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_order_items.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn4,
+            this.orderidDataGridViewTextBoxColumn,
+            this.productidDataGridViewTextBoxColumn,
+            this.orderquantityDataGridViewTextBoxColumn});
+            this.grid_order_items.DataSource = this.orderitemsBindingSource;
             this.grid_order_items.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grid_order_items.Location = new System.Drawing.Point(4, 4);
             this.grid_order_items.Margin = new System.Windows.Forms.Padding(4);
             this.grid_order_items.Name = "grid_order_items";
             this.grid_order_items.ReadOnly = true;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid_order_items.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid_order_items.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.grid_order_items.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid_order_items.Size = new System.Drawing.Size(879, 678);
             this.grid_order_items.TabIndex = 13;
+            // 
+            // idDataGridViewTextBoxColumn4
+            // 
+            this.idDataGridViewTextBoxColumn4.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn4.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn4.Name = "idDataGridViewTextBoxColumn4";
+            this.idDataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // orderidDataGridViewTextBoxColumn
+            // 
+            this.orderidDataGridViewTextBoxColumn.DataPropertyName = "order_id";
+            this.orderidDataGridViewTextBoxColumn.HeaderText = "order_id";
+            this.orderidDataGridViewTextBoxColumn.Name = "orderidDataGridViewTextBoxColumn";
+            this.orderidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productidDataGridViewTextBoxColumn
+            // 
+            this.productidDataGridViewTextBoxColumn.DataPropertyName = "product_id";
+            this.productidDataGridViewTextBoxColumn.HeaderText = "product_id";
+            this.productidDataGridViewTextBoxColumn.Name = "productidDataGridViewTextBoxColumn";
+            this.productidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // orderquantityDataGridViewTextBoxColumn
+            // 
+            this.orderquantityDataGridViewTextBoxColumn.DataPropertyName = "order_quantity";
+            this.orderquantityDataGridViewTextBoxColumn.HeaderText = "order_quantity";
+            this.orderquantityDataGridViewTextBoxColumn.Name = "orderquantityDataGridViewTextBoxColumn";
+            this.orderquantityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // orderitemsBindingSource
+            // 
+            this.orderitemsBindingSource.DataMember = "order_items";
+            this.orderitemsBindingSource.DataSource = this.dataSet;
+            // 
+            // productsTableAdapter
+            // 
+            this.productsTableAdapter.ClearBeforeFill = true;
+            // 
+            // customersTableAdapter
+            // 
+            this.customersTableAdapter.ClearBeforeFill = true;
+            // 
+            // employeesTableAdapter
+            // 
+            this.employeesTableAdapter.ClearBeforeFill = true;
+            // 
+            // ordersTableAdapter
+            // 
+            this.ordersTableAdapter.ClearBeforeFill = true;
+            // 
+            // order_itemsTableAdapter
+            // 
+            this.order_itemsTableAdapter.ClearBeforeFill = true;
+            // 
+            // button_refresh_products
+            // 
+            this.button_refresh_products.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_refresh_products.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button_refresh_products.Location = new System.Drawing.Point(4, 139);
+            this.button_refresh_products.Margin = new System.Windows.Forms.Padding(4);
+            this.button_refresh_products.Name = "button_refresh_products";
+            this.button_refresh_products.Size = new System.Drawing.Size(141, 54);
+            this.button_refresh_products.TabIndex = 2;
+            this.button_refresh_products.Text = "REFRESH";
+            this.button_refresh_products.UseVisualStyleBackColor = true;
+            this.button_refresh_products.Click += new System.EventHandler(this.button_refresh_products_Click);
             // 
             // AlkoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1314, 718);
+            this.ClientSize = new System.Drawing.Size(1513, 718);
             this.Controls.Add(this.tab);
             this.Name = "AlkoForm";
             this.Text = "AlkoForm";
+            this.Load += new System.EventHandler(this.AlkoForm_Load);
             this.tab.ResumeLayout(false);
             this.tab_products.ResumeLayout(false);
             this.tab_layout_products.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grid_products)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
             this.tab_customers.ResumeLayout(false);
             this.tab_layout_customers.ResumeLayout(false);
             this.inputLayout.ResumeLayout(false);
@@ -1507,6 +1798,7 @@
             this.buttonsLayout2.ResumeLayout(false);
             this.buttonsLayout1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grid_customers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
             this.tab_employees.ResumeLayout(false);
             this.tab_layout_employees.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -1514,19 +1806,26 @@
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grid_employees)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
             this.tab_orders.ResumeLayout(false);
             this.tab_layout_orders.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource1)).EndInit();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_orders)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).EndInit();
             this.tab_order_items.ResumeLayout(false);
             this.tab_layout_orders_item.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource1)).EndInit();
             this.tableLayoutPanel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_order_items)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderitemsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1545,11 +1844,6 @@
         private System.Windows.Forms.Label label_alcohol_content;
         private System.Windows.Forms.TextBox text_alcohol_content;
         private System.Windows.Forms.TextBox text_size_in_liters;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button button_add_products;
-        private System.Windows.Forms.Button butt_clear_products;
-        private System.Windows.Forms.Button button_update_product;
-        private System.Windows.Forms.Button button_delete_products;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button button_export_products;
         private System.Windows.Forms.Button button_import_products;
@@ -1569,9 +1863,6 @@
         private System.Windows.Forms.Label labelPhoneNumber;
         private System.Windows.Forms.TableLayoutPanel buttonsLayout2;
         private System.Windows.Forms.Button button_add_customers;
-        private System.Windows.Forms.Button button_clear_customers;
-        private System.Windows.Forms.Button button_update_customers;
-        private System.Windows.Forms.Button button_delete_customers;
         private System.Windows.Forms.TableLayoutPanel buttonsLayout1;
         private System.Windows.Forms.Button button_export_customers;
         private System.Windows.Forms.Button button_import_customers;
@@ -1587,10 +1878,6 @@
         private System.Windows.Forms.TextBox text_lastname;
         private System.Windows.Forms.TextBox text_address;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.Button button_add_employees;
-        private System.Windows.Forms.Button button_clear_employees;
-        private System.Windows.Forms.Button button_update_employees;
-        private System.Windows.Forms.Button button_delete_employees;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Button button_export_employees;
         private System.Windows.Forms.Button button_import_employees;
@@ -1606,9 +1893,6 @@
         private System.Windows.Forms.Label label_employee_id;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Button button_add_orders;
-        private System.Windows.Forms.Button button_clear_orders;
-        private System.Windows.Forms.Button button_update_orders;
-        private System.Windows.Forms.Button button_delete_orders;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.Button button_invoice;
         private System.Windows.Forms.Label label_deadline;
@@ -1623,13 +1907,64 @@
         private System.Windows.Forms.Label label_product;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private System.Windows.Forms.Button button_add_items;
-        private System.Windows.Forms.Button button_clear_items;
-        private System.Windows.Forms.Button button_update_items;
         private System.Windows.Forms.Button button_delete_items;
         private System.Windows.Forms.Label label_quantity;
         private System.Windows.Forms.ComboBox dropDownList_order;
         private System.Windows.Forms.TextBox text_order_quantity;
         private System.Windows.Forms.DataGridView grid_order_items;
+        private model.dataSet dataSet;
+        private System.Windows.Forms.BindingSource productsBindingSource;
+        private model.dataSetTableAdapters.productsTableAdapter productsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn alcoholcontentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sizeInLitersDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantityInStockDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource customersBindingSource;
+        private model.dataSetTableAdapters.customersTableAdapter customersTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn companynameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn shipmentaddressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerphoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource employeesBindingSource;
+        private model.dataSetTableAdapters.employeesTableAdapter employeesTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn peselDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource ordersBindingSource;
+        private model.dataSetTableAdapters.ordersTableAdapter ordersTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customeridDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeeidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn createtimestampDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deadlineDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource orderitemsBindingSource;
+        private model.dataSetTableAdapters.order_itemsTableAdapter order_itemsTableAdapter;
+        private System.Windows.Forms.BindingSource employeesBindingSource1;
+        private System.Windows.Forms.BindingSource customersBindingSource1;
+        private System.Windows.Forms.BindingSource productsBindingSource1;
+        private System.Windows.Forms.BindingSource ordersBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderquantityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button_delete_orders;
+        private System.Windows.Forms.Button button_clear_employees;
+        private System.Windows.Forms.Button button_add_employees;
+        private System.Windows.Forms.Button button_delete_employees;
+        private System.Windows.Forms.Button button_clear_customers;
+        private System.Windows.Forms.Button button_delete_customers;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Button button_add_products;
+        private System.Windows.Forms.Button button_clear_products;
+        private System.Windows.Forms.Button button_update_products;
+        private System.Windows.Forms.Button button_delete_products;
+        private System.Windows.Forms.Button button_refresh_products;
     }
 }
 
