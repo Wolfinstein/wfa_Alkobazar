@@ -5,13 +5,6 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="alkoDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="alcohol_content">
-          <Key>
-            <PropertyRef Name="content_name" />
-          </Key>
-          <Property Name="content_name" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="value" Type="float" />
-        </EntityType>
         <EntityType Name="customers">
           <Key>
             <PropertyRef Name="id" />
@@ -46,6 +39,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="order_number" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="customer_id" Type="int" Nullable="false" />
           <Property Name="employee_id" Type="int" Nullable="false" />
           <Property Name="create_timestamp" Type="date" Nullable="false" />
@@ -62,13 +56,6 @@
           <Property Name="price" Type="float" Nullable="false" />
           <Property Name="description" Type="varchar" MaxLength="100" />
           <Property Name="quantityInStock" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="sizes">
-          <Key>
-            <PropertyRef Name="size_name" />
-          </Key>
-          <Property Name="size_name" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="value" Type="float" />
         </EntityType>
         <Association Name="customer_fkey">
           <End Role="customers" Type="Self.customers" Multiplicity="1" />
@@ -119,13 +106,11 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="alkoDbModelStoreContainer">
-          <EntitySet Name="alcohol_content" EntityType="Self.alcohol_content" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="customers" EntityType="Self.customers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="employees" EntityType="Self.employees" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="order_items" EntityType="Self.order_items" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="orders" EntityType="Self.orders" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="products" EntityType="Self.products" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sizes" EntityType="Self.sizes" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="customer_fkey" Association="Self.customer_fkey">
             <End Role="customers" EntitySet="customers" />
             <End Role="orders" EntitySet="orders" />
@@ -192,6 +177,7 @@
           <NavigationProperty Name="customer" Relationship="Self.customer_fkey" FromRole="orders" ToRole="customers" />
           <NavigationProperty Name="employee" Relationship="Self.empId_fkey" FromRole="orders" ToRole="employees" />
           <NavigationProperty Name="order_items" Relationship="Self.orders_fkey" FromRole="orders" ToRole="order_items" />
+          <Property Name="order_number" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="product">
           <Key>
@@ -276,23 +262,7 @@
             <End Role="products" EntitySet="products" />
             <End Role="order_items" EntitySet="order_items" />
           </AssociationSet>
-          <EntitySet Name="alcohol_content" EntityType="alkoDbModel.alcohol_content" />
-          <EntitySet Name="sizes" EntityType="alkoDbModel.size" />
         </EntityContainer>
-        <EntityType Name="alcohol_content">
-          <Key>
-            <PropertyRef Name="content_name" />
-          </Key>
-          <Property Name="content_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="value" Type="Double" />
-        </EntityType>
-        <EntityType Name="size">
-          <Key>
-            <PropertyRef Name="size_name" />
-          </Key>
-          <Property Name="size_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="value" Type="Double" />
-        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -334,6 +304,7 @@
           <EntitySetMapping Name="orders">
             <EntityTypeMapping TypeName="alkoDbModel.order">
               <MappingFragment StoreEntitySet="orders">
+                <ScalarProperty Name="order_number" ColumnName="order_number" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="customer_id" ColumnName="customer_id" />
                 <ScalarProperty Name="employee_id" ColumnName="employee_id" />
@@ -355,23 +326,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="alcohol_content">
-            <EntityTypeMapping TypeName="alkoDbModel.alcohol_content">
-              <MappingFragment StoreEntitySet="alcohol_content">
-                <ScalarProperty Name="value" ColumnName="value" />
-                <ScalarProperty Name="content_name" ColumnName="content_name" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="sizes">
-            <EntityTypeMapping TypeName="alkoDbModel.size">
-              <MappingFragment StoreEntitySet="sizes">
-                <ScalarProperty Name="value" ColumnName="value" />
-                <ScalarProperty Name="size_name" ColumnName="size_name" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-        </EntityContainerMapping>
+          </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>

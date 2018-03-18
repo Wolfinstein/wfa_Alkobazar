@@ -11,8 +11,7 @@ namespace Alkobazar.model
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class order
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,16 +21,11 @@ namespace Alkobazar.model
         }
     
         public int id { get; set; }
-        [Required(ErrorMessage = "customer_id must not be empty !")]
         public int customer_id { get; set; }
-
-        [Required(ErrorMessage = "employee_id must not be empty !")]
         public int employee_id { get; set; }
-
         public System.DateTime create_timestamp { get; set; }
-
-        [Required(ErrorMessage = "deadline must not be empty !")]
         public System.DateTime deadline { get; set; }
+        public string order_number { get; set; }
     
         public virtual customer customer { get; set; }
         public virtual employee employee { get; set; }

@@ -11,8 +11,7 @@ namespace Alkobazar.model
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class product
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,23 +21,11 @@ namespace Alkobazar.model
         }
     
         public int id { get; set; }
-
-        [Required(ErrorMessage = "Name must not be empty !")]
         public string name { get; set; }
-
-        [Required(ErrorMessage = "alcohol_content must not be empty !")]
         public double alcohol_content { get; set; }
-
-        [Required(ErrorMessage = "sizeInLiters must not be empty !")]
         public double sizeInLiters { get; set; }
-
-        [Required(ErrorMessage = "price must not be empty !")]
         public double price { get; set; }
-
-        [Required(ErrorMessage = "description must not be empty !")]
         public string description { get; set; }
-
-        [Required(ErrorMessage = "quantityInStock must not be empty !")]
         public int quantityInStock { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

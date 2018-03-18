@@ -8,14 +8,12 @@
         <EntityTypeShape EntityType="alkoDbModel.customer" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="alkoDbModel.employee" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="alkoDbModel.order_items" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="alkoDbModel.order" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="alkoDbModel.order" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="alkoDbModel.product" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
         <AssociationConnector Association="alkoDbModel.customer_fkey" ManuallyRouted="false" />
         <AssociationConnector Association="alkoDbModel.empId_fkey" ManuallyRouted="false" />
         <AssociationConnector Association="alkoDbModel.orders_fkey" ManuallyRouted="false" />
         <AssociationConnector Association="alkoDbModel.product_fkey" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="alkoDbModel.alcohol_content" Width="1.5" PointX="7.5" PointY="1.875" />
-        <EntityTypeShape EntityType="alkoDbModel.size" Width="1.5" PointX="9.375" PointY="0.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

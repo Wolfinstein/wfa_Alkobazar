@@ -11,8 +11,7 @@ namespace Alkobazar.model
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class employee
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,19 +21,10 @@ namespace Alkobazar.model
         }
     
         public int id { get; set; }
-        [Required(ErrorMessage = "firstname must not be empty !")]
         public string firstname { get; set; }
-
-        [Required(ErrorMessage = "lastname must not be empty !")]
         public string lastname { get; set; }
-
-        [Required(ErrorMessage = "address must not be empty !")]
         public string address { get; set; }
-
-        [Required(ErrorMessage = "phone must not be empty !")]
         public string phone { get; set; }
-
-        [Required(ErrorMessage = "pesel must not be empty !")]
         public string pesel { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
