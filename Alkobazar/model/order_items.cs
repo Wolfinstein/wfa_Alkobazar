@@ -11,12 +11,18 @@ namespace Alkobazar.model
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class order_items
     {
         public int id { get; set; }
+        [Required(ErrorMessage = "order_id must not be empty !")]
         public int order_id { get; set; }
+
+        [Required(ErrorMessage = "product_id must not be empty !")]
         public int product_id { get; set; }
+
+        [Required(ErrorMessage = "order_quantity must not be empty !")]
         public int order_quantity { get; set; }
     
         public virtual order order { get; set; }

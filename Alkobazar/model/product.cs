@@ -20,26 +20,25 @@ namespace Alkobazar.model
         {
             this.order_items = new HashSet<order_items>();
         }
-
-        [Required(ErrorMessage = "Id is required")]
+    
         public int id { get; set; }
 
-        [Required(ErrorMessage = "Name is required")]
+        [Required(ErrorMessage = "Name must not be empty !")]
         public string name { get; set; }
 
-        [Required(ErrorMessage = "Alcohol Content is required")]
+        [Required(ErrorMessage = "alcohol_content must not be empty !")]
         public double alcohol_content { get; set; }
 
-        [Required(ErrorMessage = "Size is required")]
+        [Required(ErrorMessage = "sizeInLiters must not be empty !")]
         public double sizeInLiters { get; set; }
 
-        [Required(ErrorMessage = "Price is required")]
+        [Required(ErrorMessage = "price must not be empty !")]
         public double price { get; set; }
 
-        [Required(ErrorMessage = "Description is required")]
+        [Required(ErrorMessage = "description must not be empty !")]
         public string description { get; set; }
 
-        [Required(ErrorMessage = "Quantity is required")]
+        [Required(ErrorMessage = "quantityInStock must not be empty !")]
         public int quantityInStock { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

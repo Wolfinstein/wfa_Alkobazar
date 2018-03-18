@@ -14,6 +14,8 @@
         <AssociationConnector Association="alkoDbModel.empId_fkey" ManuallyRouted="false" />
         <AssociationConnector Association="alkoDbModel.orders_fkey" ManuallyRouted="false" />
         <AssociationConnector Association="alkoDbModel.product_fkey" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="alkoDbModel.alcohol_content" Width="1.5" PointX="7.5" PointY="1.875" />
+        <EntityTypeShape EntityType="alkoDbModel.size" Width="1.5" PointX="9.375" PointY="0.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

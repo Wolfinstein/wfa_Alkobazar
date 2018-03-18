@@ -12,7 +12,6 @@ namespace Alkobazar
 {
     public partial class AlkoForm : Form
     {
-        private service.ImportButtonHandle import = new service.ImportButtonHandle();
         private int _index = 0; // shows selected row index
         private alkoDbEntities db = new alkoDbEntities();
 
@@ -20,6 +19,7 @@ namespace Alkobazar
         {
             InitializeComponent();
         }
+
 
         private void AlkoForm_Load(object sender, EventArgs e)
         {
@@ -35,14 +35,17 @@ namespace Alkobazar
             this.grid_employees.MultiSelect = false;
         }
 
+
+        // PRODUCTS 
+
         private void button_clear_products_Click(object sender, EventArgs e)
         {
             text_quantity_in_stock.Text = "";
-            text_alcohol_content.Text = "";
-            text_size_in_liters.Text = "";
             text_product_description.Text = "";
             text_product_name.Text = "";
             text_price.Text = "";
+            text_size_in_liters.Text = "";
+            text_alcohol_content.Text = "";
         }
 
         private void button_add_products_Click(object sender, EventArgs e)
@@ -53,21 +56,21 @@ namespace Alkobazar
             {
                 var product = new product
                 {
-                    quantityInStock = int.Parse(text_quantity_in_stock.Text),
-                    alcohol_content = Convert.ToDouble(text_alcohol_content.Text),
-                    sizeInLiters = Convert.ToDouble(text_size_in_liters.Text),
-                    description = text_product_description.Text,
+                    quantityInStock = int.Parse(text_quantity_in_stock.Text.ToString()),
+                    alcohol_content = Convert.ToDouble(text_alcohol_content.Text.ToString()),
+                    sizeInLiters = Convert.ToDouble(text_size_in_liters.Text.ToString()),
+                    description = text_product_description.Text.ToString(),
                     name = text_product_name.Text.ToString(),
-                    price = Convert.ToDouble(text_price.Text)
+                    price = Convert.ToDouble(text_price.Text.ToString())
                 };
-
+                
                 if (!isProductPresent(product.name, product.sizeInLiters))
                 {
                     flag = false;
                     MessageBox.Show("There is already items with this name and size in database ! ");
                 }
 
-                if (isProductInputValid(product) && flag)
+                if (isInputValid(product) && flag)
                 {
                     var addConfirm = MessageBox.Show(@"Are you sure you want to add given product", @"Confirm add",
                                                         MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -79,29 +82,37 @@ namespace Alkobazar
                     this.productsTableAdapter.Fill(this.dataSet.products);
                 }
             }
-            catch (FormatException ex)
+            catch(Exception ex)
             {
-                Console.Write(ex.Message);
-                MessageBox.Show("Input data must not be empty nor in incorrect format !");
+                MessageBox.Show(ex.Message);
             }
-        }
 
+
+        }
+        
         private void button_update_products_Click(object sender, EventArgs e)
         {
             int product_id = Convert.ToInt32(grid_products.Rows[_index].Cells[0].Value);
-
+            bool flag = true;
             var product = db.products.Where(p => p.id == product_id).First();
 
             try
             {
                 product.quantityInStock = int.Parse(text_quantity_in_stock.Text);
-                product.alcohol_content = Convert.ToDouble(text_alcohol_content.Text);
-                product.sizeInLiters = Convert.ToDouble(text_size_in_liters.Text);
+                product.alcohol_content = Convert.ToDouble(text_alcohol_content.Text.ToString());
+                product.sizeInLiters = Convert.ToDouble(text_alcohol_content.Text.ToString());
                 product.description = text_product_description.Text;
                 product.name = text_product_name.Text.ToString();
                 product.price = Convert.ToDouble(text_price.Text);
 
-                if (isProductInputValid(product))
+                if (!isProductPresent(product.name, product.sizeInLiters))
+                {
+                    flag = false;
+                    MessageBox.Show("There is already items with this name and size in database ! ");
+
+                }
+
+                if (isInputValid(product) && flag)
                 {
                     var addConfirm = MessageBox.Show(@"Are you sure you want to update product" + "\n" +
                                                         "\n" + "from:" + "\n" + "\n" +
@@ -163,6 +174,16 @@ namespace Alkobazar
             text_product_name.Text = row.Cells["nameDataGridViewTextBoxColumn"].Value.ToString();
             text_price.Text = row.Cells["priceDataGridViewTextBoxColumn"].Value.ToString();
         }
+        
+        private void button_export_products_Click(object sender, EventArgs e)
+        {
+            SaveToCSV(grid_products);
+        }
+
+        private void button_import_products_Click(object sender, EventArgs e)
+        {
+            GetFromCSV("products");
+        }
 
         public bool isProductPresent(String name, double size)
         {
@@ -173,46 +194,304 @@ namespace Alkobazar
 
             return result;
         }
+        
+        // CUSTOMERS
 
-        public bool isProductInputValid(product product)
+        private void grid_customers_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            ValidationContext context = new ValidationContext(product, null, null);
-            IList<ValidationResult> errors = new List<ValidationResult>();
+            _index = e.RowIndex;
+            DataGridViewRow row = grid_customers.Rows[e.RowIndex];
 
-            if (!Validator.TryValidateObject(product, context, errors, true))
+            text_shipment_address.Text = row.Cells["shipmentaddressDataGridViewTextBoxColumn"].Value.ToString();
+            text_company_name.Text = row.Cells["companynameDataGridViewTextBoxColumn"].Value.ToString();
+            text_phone_number.Text = row.Cells["customerphoneDataGridViewTextBoxColumn"].Value.ToString();
+
+        }
+
+        private void button_import_customers_Click(object sender, EventArgs e)
+        {
+            GetFromCSV("customers");
+        }
+
+        private void button_export_customers_Click(object sender, EventArgs e)
+        {
+            SaveToCSV(grid_customers);
+        }
+
+        private void button_add_customers_Click(object sender, EventArgs e)
+        {
+            bool flag = true;
+
+            try
             {
-                foreach (ValidationResult result in errors)
-                    MessageBox.Show(result.ErrorMessage);
-                return false;
+                var customer = new customer
+                {
+                    company_name = text_company_name.Text.ToString(),
+                    shipment_address = text_shipment_address.Text.ToString(),
+                    customer_phone = text_phone_number.Text.ToString()
+                };
+
+                if (!isCustomerPresent(customer.company_name))
+                {
+                    flag = false;
+                    MessageBox.Show("There is already customer with this name in database ! ");
+                }
+
+                if (isInputValid(customer) && flag)
+                {
+                    var addConfirm = MessageBox.Show(@"Are you sure you want to add given customer", @"Confirm add",
+                                                        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (addConfirm == DialogResult.No)
+                        return;
+
+                    db.customers.Add(customer);
+                    db.SaveChanges();
+                    this.customersTableAdapter.Fill(this.dataSet.customers);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                return true;
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        public bool isCustomerPresent(String name)
+        {
+            var customerCount = db.customers.Where(p => p.company_name == name).Count();
+            bool result = customerCount > 0 ? false : true;
+
+            return result;
+        }
+
+        private void button_delete_customers_Click(object sender, EventArgs e)
+        {
+
+            var deleteConfirm = MessageBox.Show(@"Are you sure you want to delete the selected customer", @"Confirm deletion",
+                                                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (deleteConfirm == DialogResult.No)
+                return;
+
+            int customer_id = Convert.ToInt32(grid_customers.Rows[_index].Cells[0].Value);
+
+            db.customers.Remove(db.customers.Where(p => p.id == customer_id).First());
+            db.SaveChanges();
+            this.customersTableAdapter.Fill(this.dataSet.customers);
+        }
+
+        private void button_clear_customers_Click(object sender, EventArgs e)
+        {
+            text_company_name.Text = "";
+            text_shipment_address.Text = "";
+            text_phone_number.Text = "";
+        }
+
+        private void button_update_customers_Click(object sender, EventArgs e)
+        {
+            bool flag = true;
+            int customer_id = Convert.ToInt32(grid_customers.Rows[_index].Cells[0].Value);
+            var customer = db.customers.Where(p => p.id == customer_id).First();
+
+            try
+            {
+                customer.company_name = text_company_name.Text.ToString();
+                customer.shipment_address = text_shipment_address.Text.ToString();
+                customer.customer_phone = text_phone_number.Text.ToString();
+
+                if(!isCustomerPresent(customer.company_name))
+                {
+                    MessageBox.Show("There is already company with this name in database ! ");
+                    flag = false;
+                }
+
+                if (isInputValid(customer) && flag)
+                {
+                    var addConfirm = MessageBox.Show(@"Are you sure you want to update customer" + "\n" +
+                                                        "\n" + "from:" + "\n" + "\n" +
+                                                        grid_customers.Rows[_index].Cells[1].Value + ", " + "\n" +
+                                                        grid_customers.Rows[_index].Cells[2].Value + ", " + "\n" +
+                                                        grid_customers.Rows[_index].Cells[3].Value + ", " + "\n" +
+                                                        "\n" + " to :" + "\n" + "\n" +
+                                                        customer.company_name  + ", " + "\n" +
+                                                        customer.shipment_address  + ", " + "\n" +
+                                                        customer.customer_phone 
+                                                        , @"Confirm update",
+                                                        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (addConfirm == DialogResult.No)
+                        return;
+
+                    db.SaveChanges();
+                    this.customersTableAdapter.Fill(this.dataSet.customers);
+                }
+            }
+            catch (FormatException ex)
+            {
+                Console.Write(ex.Message);
+                MessageBox.Show("You cannot update customer with incorrect data ! ");
             }
         }
 
-        private void button_refresh_products_Click(object sender, EventArgs e)
+        // EMPLOYEES
+        private void grid_employees_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.productsTableAdapter.Fill(this.dataSet.products);
+            _index = e.RowIndex;
+            DataGridViewRow row = grid_employees.Rows[e.RowIndex];
+
+            text_firstname.Text = row.Cells["firstnameDataGridViewTextBoxColumn"].Value.ToString();
+            text_lastname.Text = row.Cells["lastnameDataGridViewTextBoxColumn"].Value.ToString();
+            text_phone.Text = row.Cells["phoneDataGridViewTextBoxColumn"].Value.ToString();
+            text_address.Text = row.Cells["addressDataGridViewTextBoxColumn"].Value.ToString();
+            text_pesel.Text = row.Cells["peselDataGridViewTextBoxColumn"].Value.ToString();
+
         }
 
-        private void button_export_products_Click(object sender, EventArgs e)
+        private void button_import_employees_Click(object sender, EventArgs e)
         {
-            SaveToCSV(grid_products);
+            GetFromCSV("employees");
         }
 
-        private void button_import_products_Click(object sender, EventArgs e)
+        private void button_export_employees_Click(object sender, EventArgs e)
         {
-            GetFromCSV();               
+            SaveToCSV(grid_employees);
         }
 
-        private List<product> dataTableToList(DataTable dt)
+        private void button_add_employees_Click(object sender, EventArgs e)
+        {
+            bool flag = true;
+
+            try
+            {
+                var employee = new employee
+                {
+                    address = text_address.Text.ToString(),
+                    firstname = text_firstname.Text.ToString(),
+                    lastname = text_lastname.Text.ToString(),
+                    pesel = text_pesel.Text.ToString(),
+                    phone = text_phone.Text.ToString(),
+
+                };
+
+                if (!isEmployeePresent(employee.pesel))
+                {
+                    flag = false;
+                    MessageBox.Show("There is already employee with this pesel in database ! ");
+                }
+
+                if (isInputValid(employee) && flag)
+                {
+                    var addConfirm = MessageBox.Show(@"Are you sure you want to add given employee", @"Confirm add",
+                                                        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (addConfirm == DialogResult.No)
+                        return;
+
+                    db.employees.Add(employee);
+                    db.SaveChanges();
+                    this.employeesTableAdapter.Fill(this.dataSet.employees);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        public bool isEmployeePresent(String pesel)
+        {
+            var employeeCount = db.employees.Where(p => p.pesel == pesel).Count();
+            bool result = employeeCount > 0 ? false : true;
+
+            return result;
+        }
+
+        private void button_delete_employees_Click(object sender, EventArgs e)
+        {
+
+            var deleteConfirm = MessageBox.Show(@"Are you sure you want to delete the selected employee", @"Confirm deletion",
+                                                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (deleteConfirm == DialogResult.No)
+                return;
+
+            int employee_id = Convert.ToInt32(grid_employees.Rows[_index].Cells[0].Value);
+
+            db.employees.Remove(db.employees.Where(p => p.id == employee_id).First());
+            db.SaveChanges();
+            this.employeesTableAdapter.Fill(this.dataSet.employees);
+        }
+
+        private void button_clear_employees_Click(object sender, EventArgs e)
+        {
+            text_firstname.Text = "";
+            text_lastname.Text = "";
+            text_pesel.Text = "";
+            text_phone.Text = "";
+            text_address.Text = "";
+        }
+
+        private void button_update_employees_Click(object sender, EventArgs e)
+        {
+            int employee_id = Convert.ToInt32(grid_employees.Rows[_index].Cells[0].Value);
+            var employee = db.employees.Where(p => p.id == employee_id).First();
+            bool flag = true;
+            try
+            {
+                employee.address = text_address.Text.ToString();
+                employee.firstname = text_firstname.Text.ToString();
+                employee.lastname = text_lastname.Text.ToString();
+                employee.pesel = text_pesel.Text.ToString();
+                employee.phone = text_phone.Text.ToString();
+
+                if(!isEmployeePresent(employee.pesel))
+                {
+                    flag = false;
+                    MessageBox.Show("There is already employee with this pesel in database ! ");
+
+                }
+
+                if (isInputValid(employee) && flag)
+                {
+                    var addConfirm = MessageBox.Show(@"Are you sure you want to update employee" + "\n" +
+                                                        "\n" + "from:" + "\n" + "\n" +
+                                                        grid_employees.Rows[_index].Cells[1].Value + ", " + "\n" +
+                                                        grid_employees.Rows[_index].Cells[2].Value + ", " + "\n" +
+                                                        grid_employees.Rows[_index].Cells[3].Value + ", " + "\n" +
+                                                        grid_employees.Rows[_index].Cells[4].Value + ", " + "\n" +
+                                                        grid_employees.Rows[_index].Cells[5].Value + ", " + "\n" +
+                                                        "\n" + " to :" + "\n" + "\n" +
+                                                        employee.firstname + ", " + "\n" +
+                                                        employee.lastname + ", " + "\n" +
+                                                        employee.address + ", " + "\n" +
+                                                        employee.phone + ", " + "\n" +
+                                                        employee.pesel
+                                                        , @"Confirm update",
+                                                        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (addConfirm == DialogResult.No)
+                        return;
+
+                    db.SaveChanges();
+                    this.employeesTableAdapter.Fill(this.dataSet.employees);
+                }
+            }
+            catch (FormatException ex)
+            {
+                Console.Write(ex.Message);
+                MessageBox.Show("You cannot update employee with incorrect data ! ");
+            }
+        }
+
+        // UTILITY
+
+        private List<product> ProductsToDataTable(DataTable dt)
         {
             try
             {
                 var convertedList = (from rw in dt.AsEnumerable()
                                      select new product()
-                                     {                                         
+                                     {
                                          name = rw["nameDataGridViewTextBoxColumn"].ToString(),
                                          alcohol_content = Convert.ToDouble(rw["alcoholcontentDataGridViewTextBoxColumn"]),
                                          sizeInLiters = Convert.ToDouble(rw["sizeInLitersDataGridViewTextBoxColumn"]),
@@ -222,16 +501,56 @@ namespace Alkobazar
                                      }).ToList();
                 return convertedList;
             }
-            catch(Exception ex)
-            {                
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
                 return new List<product>();
             }
-                
+
         }
+        private List<customer> CustomersToDataTable(DataTable dt)
+        {
+            try
+            {
+                var convertedList = (from rw in dt.AsEnumerable()
+                                     select new customer()
+                                     {
+                                         shipment_address = rw["shipmentaddressDataGridViewTextBoxColumn"].ToString(),
+                                         company_name = rw["companynameDataGridViewTextBoxColumn"].ToString(),
+                                         customer_phone = rw["customerphoneDataGridViewTextBoxColumn"].ToString()
+                                     }).ToList();
+                return convertedList; 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return new List<customer>();
+            }
 
+        }
+        private List<employee> EmployeesToDataTable(DataTable dt)
+        {
+            try
+            {
+                var convertedList = (from rw in dt.AsEnumerable()
+                                     select new employee()
+                                     {
+                                         firstname = rw["firstnameDataGridViewTextBoxColumn"].ToString(),
+                                         lastname = rw["lastnameDataGridViewTextBoxColumn"].ToString(),
+                                         phone = rw["phoneDataGridViewTextBoxColumn"].ToString(),
+                                         address = rw["addressDataGridViewTextBoxColumn"].ToString(),
+                                         pesel = rw["peselDataGridViewTextBoxColumn"].ToString(),
+                                     }).ToList();
+                return convertedList;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return new List<employee>();
+            }
 
-        private void GetFromCSV()
+        }
+        private void GetFromCSV(string model)
         {
             OpenFileDialog fileDialog = new OpenFileDialog
             {
@@ -272,26 +591,73 @@ namespace Alkobazar
                 {
                     MessageBox.Show(ex.Message);
                 }
-
-                List<product> listOfProducts = dataTableToList(dt);
                 int counter = 0;
-                foreach (product product in listOfProducts)
+                switch (model)
                 {
-                    counter++;
-                    try
-                    {
-                        db.products.Add(product);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message + "\n" + "Row number " + counter + " is not valid !");
-                    }
+                    case "products":
+                        List<product> listOfProducts = ProductsToDataTable(dt);
+        
+                        foreach (product product in listOfProducts)
+                        {
+                            counter++;
+                            try
+                            {
+                                db.products.Add(product);
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message + "\n" + "Row number " + counter + " is not valid !");
+                            }
+                        }
+                        break;
+                    case "customers":
+                        List<customer> listOfCustomers = CustomersToDataTable(dt);
+                        foreach (customer customer in listOfCustomers)
+                        {
+                            counter++;
+                            try
+                            {
+                                db.customers.Add(customer);
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message + "\n" + "Row number " + counter + " is not valid !");
+                            }
+                        }
+                        break;
+                    case "employees":
+                        List<employee> listOfEmployees = EmployeesToDataTable(dt);
+                        foreach (employee employee in listOfEmployees)
+                        {
+                            counter++;
+                            try
+                            {
+                                db.employees.Add(employee);
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message + "\n" + "Row number " + counter + " is not valid !");
+                            }
+                        }
+                        break;
                 }
+                
                 db.SaveChanges();
-                this.productsTableAdapter.Fill(this.dataSet.products);
+
+                switch (model)
+                {
+                    case "employees":
+                        this.employeesTableAdapter.Fill(this.dataSet.employees);
+                        break;
+                    case "customers":
+                        this.customersTableAdapter.Fill(this.dataSet.customers);
+                        break;
+                    case "products":
+                        this.productsTableAdapter.Fill(this.dataSet.products);
+                        break;
+                }
             }
         }
-
         private void SaveToCSV(DataGridView DGV)
         {
             string filename = "";
@@ -331,10 +697,29 @@ namespace Alkobazar
                 MessageBox.Show("Your file was generated and its ready for use.");
             }
         }
+        public bool isInputValid(object obj)
+        {
+            ValidationContext context = new ValidationContext(obj, null, null);
+            IList<ValidationResult> errors = new List<ValidationResult>();
 
+            if (!Validator.TryValidateObject(obj, context, errors, true))
+            {
+                foreach (ValidationResult result in errors)
+                    MessageBox.Show(result.ErrorMessage);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        private void button_refresh_products_Click(object sender, EventArgs e)
+        {
+            this.productsTableAdapter.Fill(this.dataSet.products);
+            this.customersTableAdapter.Fill(this.dataSet.customers);
+            this.employeesTableAdapter.Fill(this.dataSet.employees);
+        }
 
     }
-
-
-
 }
+                        

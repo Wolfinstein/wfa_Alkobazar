@@ -85,6 +85,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dataModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="model\dataSet.cs">
+      <DependentUpon>dataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="model\dataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -104,7 +107,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="service\ImportButtonHandle.cs" />
     <EmbeddedResource Include="AlkoForm.resx">
       <DependentUpon>AlkoForm.cs</DependentUpon>
     </EmbeddedResource>
