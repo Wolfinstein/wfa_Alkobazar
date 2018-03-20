@@ -69,9 +69,8 @@ namespace Alkobazar
                     MessageBox.Show("There Is already items with this name and size in database ! ");
                 }
 
-                if (IsInputValid(product) && flag)
+                if (IsInputValid(product) && flag && ShowConfirmMessage("add", "product"))
                 {
-                    ShowConfirmMessage("add", "product");
 
                     db.products.Add(product);
                     db.SaveChanges();
@@ -96,7 +95,7 @@ namespace Alkobazar
             {
                 product.quantityInStock = int.Parse(text_quantity_in_stock.Text);
                 product.alcohol_content = Convert.ToDouble(text_alcohol_content.Text.ToString());
-                product.sizeInLiters = Convert.ToDouble(text_alcohol_content.Text.ToString());
+                product.sizeInLiters = Convert.ToDouble(text_size_in_liters.Text.ToString());
                 product.description = text_product_description.Text;
                 product.name = text_product_name.Text.ToString();
                 product.price = Convert.ToDouble(text_price.Text);
@@ -138,9 +137,8 @@ namespace Alkobazar
         private void Button_delete_products_Click(object sender, EventArgs e)
         {
 
-            ShowConfirmMessage("delete", "product");
-
-
+            if(ShowConfirmMessage("delete", "product"))
+            {       
             int product_id = Convert.ToInt32(Grid_products.Rows[_index].Cells[0].Value);
             try
             {
@@ -153,6 +151,7 @@ namespace Alkobazar
                 MessageBox.Show("Something went wrong !");
             }
             this.productsTableAdapter.Fill(this.dataSet.products);
+            }
         }
 
         private void Grid_products_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -248,10 +247,8 @@ namespace Alkobazar
                     MessageBox.Show("There is already customer with this name in database ! ");
                 }
 
-                if (IsInputValid(customer) && flag)
-                {
-                    ShowConfirmMessage("add", "customer");
-
+                if (IsInputValid(customer) && flag && ShowConfirmMessage("add", "customer"))
+                {     
                     db.customers.Add(customer);
                     db.SaveChanges();
                     this.customersTableAdapter.Fill(this.dataSet.customers);
@@ -274,13 +271,14 @@ namespace Alkobazar
 
         private void Button_delete_customers_Click(object sender, EventArgs e)
         {
-            ShowConfirmMessage("delete", "customer");
+            if (ShowConfirmMessage("delete", "customer"))
+            {
+                int customer_id = Convert.ToInt32(Grid_customers.Rows[_index].Cells[0].Value);
 
-            int customer_id = Convert.ToInt32(Grid_customers.Rows[_index].Cells[0].Value);
-
-            db.customers.Remove(db.customers.Where(p => p.id == customer_id).First());
-            db.SaveChanges();
-            this.customersTableAdapter.Fill(this.dataSet.customers);
+                db.customers.Remove(db.customers.Where(p => p.id == customer_id).First());
+                db.SaveChanges();
+                this.customersTableAdapter.Fill(this.dataSet.customers);
+            }
         }
 
         private void Button_clear_customers_Click(object sender, EventArgs e)
@@ -404,9 +402,9 @@ namespace Alkobazar
                     MessageBox.Show("There Is already employee with this pesel in database ! ");
                 }
 
-                if (IsInputValid(employee) && flag)
+                if (IsInputValid(employee) && flag && ShowConfirmMessage("add", "employee"))
                 {
-                    ShowConfirmMessage("add", "employee");
+                    
 
                     db.employees.Add(employee);
                     db.SaveChanges();
@@ -429,13 +427,14 @@ namespace Alkobazar
 
         private void Button_delete_employees_Click(object sender, EventArgs e)
         {
-            ShowConfirmMessage("delete", "employee");
+            if (ShowConfirmMessage("delete", "employee"))
+            {
+                int employee_id = Convert.ToInt32(Grid_employees.Rows[_index].Cells[0].Value);
 
-            int employee_id = Convert.ToInt32(Grid_employees.Rows[_index].Cells[0].Value);
-
-            db.employees.Remove(db.employees.Where(p => p.id == employee_id).First());
-            db.SaveChanges();
-            this.employeesTableAdapter.Fill(this.dataSet.employees);
+                db.employees.Remove(db.employees.Where(p => p.id == employee_id).First());
+                db.SaveChanges();
+                this.employeesTableAdapter.Fill(this.dataSet.employees);
+            }
         }
 
         private void Button_clear_employees_Click(object sender, EventArgs e)
@@ -496,74 +495,85 @@ namespace Alkobazar
 
         private void Button_invoice_Click(object sender, EventArgs e)
         {
-            int order_id = Convert.ToInt32(Grid_orders.Rows[_index].Cells[0].Value);
-            Double total_sum = 0;
-            int total_quantity = 0;
-            int yPoint = 240;
 
-            PdfDocument document = new PdfDocument();
-            document.Info.Title = "INVOICE_" + db.orders.Where(o => o.id == order_id).First().order_number.ToString();
-            PdfPage page = document.AddPage();
-            XGraphics gfx = XGraphics.FromPdfPage(page);
-            DrawImage(gfx, @"resources\bazar_logo.png", 50, 50, 50, 50);
 
-            XFont font_bold = new XFont("Verdana", 10, XFontStyle.BoldItalic);
-
-            var emp = db.orders.Where(o => o.id == order_id).First().employee;
-            var cust = db.orders.Where(o => o.id == order_id).First().customer;
-            var date = db.orders.Where(o => o.id == order_id).First().deadline;
-
-            gfx.DrawString("Inovice_NR: " + db.orders.Where(o => o.id == order_id).First().order_number.ToString(), font_bold, XBrushes.Black, new XRect(40, 120, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
-            gfx.DrawString("Employee: " + emp.firstname + " " + emp.lastname, font_bold, XBrushes.Black, new XRect(40, 135, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
-            gfx.DrawString("Customer: " + cust.company_name, font_bold, XBrushes.Black, new XRect(40, 150, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
-            gfx.DrawString("Deadline: " + date.ToString("d"), font_bold, XBrushes.Black, new XRect(40, 165, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
-
-            gfx.DrawString("Product Name", font_bold, XBrushes.Black, new XRect(100, yPoint, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
-            gfx.DrawString("Quantity", font_bold, XBrushes.Black, new XRect(260, yPoint, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
-            gfx.DrawString("Price", font_bold, XBrushes.Black, new XRect(360, yPoint, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
-            gfx.DrawString("Value", font_bold, XBrushes.Black, new XRect(460, yPoint, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
-
-            XFont font_regular = new XFont("Verdana", 10, XFontStyle.Regular);
-
-            var order_Items = db.order_items.Where(o => o.order_id == order_id);
-
-            if (!order_Items.Any())
+            if (_index >= 0)
             {
-                MessageBox.Show("There Is no products added to order !");
+                int order_id = Convert.ToInt32(Grid_orders.Rows[_index].Cells[0].Value);
+                Double total_sum = 0;
+                int total_quantity = 0;
+                int yPoint = 240;
+
+                PdfDocument document = new PdfDocument();
+                document.Info.Title = "INVOICE_" + db.orders.Where(o => o.id == order_id).First().order_number.ToString();
+                PdfPage page = document.AddPage();
+                XGraphics gfx = XGraphics.FromPdfPage(page);
+                DrawImage(gfx, @"resources\bazar_logo.png", 50, 50, 50, 50);
+
+                XFont font_bold = new XFont("Verdana", 10, XFontStyle.BoldItalic);
+
+                var emp = db.orders.Where(o => o.id == order_id).First().employee;
+                var cust = db.orders.Where(o => o.id == order_id).First().customer;
+                var date = db.orders.Where(o => o.id == order_id).First().deadline;
+
+                gfx.DrawString("Inovice_NR: " + db.orders.Where(o => o.id == order_id).First().order_number.ToString(), font_bold, XBrushes.Black, new XRect(40, 120, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+                gfx.DrawString("Employee: " + emp.firstname + " " + emp.lastname, font_bold, XBrushes.Black, new XRect(40, 135, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+                gfx.DrawString("Customer: " + cust.company_name, font_bold, XBrushes.Black, new XRect(40, 150, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+                gfx.DrawString("Deadline: " + date.ToString("d"), font_bold, XBrushes.Black, new XRect(40, 165, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+
+                gfx.DrawString("Product Name", font_bold, XBrushes.Black, new XRect(100, yPoint, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+                gfx.DrawString("Quantity", font_bold, XBrushes.Black, new XRect(260, yPoint, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+                gfx.DrawString("Price", font_bold, XBrushes.Black, new XRect(360, yPoint, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+                gfx.DrawString("Value", font_bold, XBrushes.Black, new XRect(460, yPoint, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+
+                XFont font_regular = new XFont("Verdana", 10, XFontStyle.Regular);
+
+                var order_Items = db.order_items.Where(o => o.order_id == order_id);
+
+                if (!order_Items.Any())
+                {
+                    MessageBox.Show("There Is no products added to order !");
+                }
+                else
+                {
+                    foreach (order_items o in order_Items)
+                    {
+                        yPoint = yPoint + 25;
+                        Double price = db.products.Where(p => p.id == o.product_id).First().price;
+                        total_sum = total_sum + (o.order_quantity * price);
+                        total_quantity = total_quantity + o.order_quantity;
+
+                        gfx.DrawString(o.product.name, font_regular, XBrushes.Black, new XRect(100, yPoint, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+                        gfx.DrawString(o.order_quantity.ToString(), font_regular, XBrushes.Black, new XRect(260, yPoint, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+                        gfx.DrawString(price.ToString(), font_regular, XBrushes.Black, new XRect(360, yPoint, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+                        gfx.DrawString((o.order_quantity * price).ToString(), font_regular, XBrushes.Black, new XRect(460, yPoint, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+                    }
+
+                    yPoint = yPoint + 25;
+                    gfx.DrawLine(XPens.Black, 0, yPoint, 1000, yPoint);
+                    yPoint = yPoint + 5;
+                    gfx.DrawString(total_sum.ToString(), font_regular, XBrushes.Black, new XRect(460, yPoint, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+
+                    string filename = "INVOICE_" + db.orders.Where(o => o.id == order_id).First().order_number.ToString();
+
+                    try
+                    {
+                        document.Save(filename);
+                        Process.Start(filename);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.Write(ex.Message);
+                        MessageBox.Show("You cannot generate invoice unless previous one Is closed !");
+                    }
+                }
             }
             else
             {
-                foreach (order_items o in order_Items)
-                {
-                    yPoint = yPoint + 25;
-                    Double price = db.products.Where(p => p.id == o.product_id).First().price;
-                    total_sum = total_sum + (o.order_quantity * price);
-                    total_quantity = total_quantity + o.order_quantity;
+                MessageBox.Show("Choose another one");
 
-                    gfx.DrawString(o.product.name, font_regular, XBrushes.Black, new XRect(100, yPoint, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
-                    gfx.DrawString(o.order_quantity.ToString(), font_regular, XBrushes.Black, new XRect(260, yPoint, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
-                    gfx.DrawString(price.ToString(), font_regular, XBrushes.Black, new XRect(360, yPoint, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
-                    gfx.DrawString((o.order_quantity * price).ToString(), font_regular, XBrushes.Black, new XRect(460, yPoint, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
-                }
-
-                yPoint = yPoint + 25;
-                gfx.DrawLine(XPens.Black, 0, yPoint, 1000, yPoint);
-                yPoint = yPoint + 5;
-                gfx.DrawString(total_sum.ToString(), font_regular, XBrushes.Black, new XRect(460, yPoint, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
-
-                string filename = "INVOICE_" + db.orders.Where(o => o.id == order_id).First().order_number.ToString();
-
-                try
-                {
-                    document.Save(filename);
-                    Process.Start(filename);
-                }
-                catch (Exception ex)
-                {
-                    Console.Write(ex.Message);
-                    MessageBox.Show("You cannot generate invoice unless previous one Is closed !");
-                }
             }
+           
         }
 
         private void Button_add_orders_Click(object sender, EventArgs e)
@@ -587,11 +597,8 @@ namespace Alkobazar
                     MessageBox.Show("There Is already order with this number in database ! ");
                 }
 
-                if (IsInputValid(order) & flag)
-                {
-                    ShowConfirmMessage("add", "order");
-
-
+                if (IsInputValid(order) & flag && ShowConfirmMessage("add", "order"))
+                {                  
                     db.orders.Add(order);
                     db.SaveChanges();
                     this.ordersTableAdapter.Fill(this.dataSet.orders);
@@ -606,14 +613,16 @@ namespace Alkobazar
 
         private void Button_delete_orders_Click(object sender, EventArgs e)
         {
-            ShowConfirmMessage("delete", "order");
 
 
-            int order_id = Convert.ToInt32(Grid_orders.Rows[_index].Cells[0].Value);
+            if (ShowConfirmMessage("delete", "order"))
+            {
+                int order_id = Convert.ToInt32(Grid_orders.Rows[_index].Cells[0].Value);
 
-            db.orders.Remove(db.orders.Where(p => p.id == order_id).First());
-            db.SaveChanges();
-            this.ordersTableAdapter.Fill(this.dataSet.orders);
+                db.orders.Remove(db.orders.Where(p => p.id == order_id).First());
+                db.SaveChanges();
+                this.ordersTableAdapter.Fill(this.dataSet.orders);
+            }
         }
 
         public bool IsOrderPresent(String number)
@@ -717,11 +726,8 @@ namespace Alkobazar
                 }
 
 
-                if (IsInputValid(order_item) && flag)
+                if (IsInputValid(order_item) && flag && ShowConfirmMessage("add", "item"))
                 {
-                    ShowConfirmMessage("add", "item");
-
-
                     db.order_items.Add(order_item);
 
                     product.quantityInStock = product.quantityInStock - order_item.order_quantity;
@@ -739,21 +745,23 @@ namespace Alkobazar
 
         private void Button_delete_items_Click(object sender, EventArgs e)
         {
-            ShowConfirmMessage("delete", "item");
-
-            try
+            if (ShowConfirmMessage("delete", "item"))
             {
-                int order_item_id = Convert.ToInt32(Grid_order_items.Rows[_index].Cells[0].Value);
-                db.order_items.Remove(db.order_items.Where(p => p.id == order_item_id).First());
-                db.SaveChanges();
-                this.order_itemsTableAdapter.Fill(this.dataSet.order_items);
+                try
+                {
+                    int order_item_id = Convert.ToInt32(Grid_order_items.Rows[_index].Cells[0].Value);
+                    product product = db.products.Find(db.order_items.Find(order_item_id).product_id);
+                    product.quantityInStock += db.order_items.Where(p => p.id == order_item_id).First().order_quantity;
+                    db.order_items.Remove(db.order_items.Where(p => p.id == order_item_id).First());
+                    db.SaveChanges();
+                    this.order_itemsTableAdapter.Fill(this.dataSet.order_items);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("There Is nothing to delete !");
+                    Console.Write(ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("There Is nothing to delete !");
-                Console.Write(ex.Message);
-            }
-
 
         }
 
@@ -771,9 +779,9 @@ namespace Alkobazar
             if (_index >= 0)
             {
                 DataGridViewRow row = Grid_order_items.Rows[e.RowIndex];
-                dropDownList_order.SelectedValue = row.Cells["orderidDataGridViewTextBoxColumn"].Value.ToString();
-                dropDownList_product.SelectedValue = row.Cells["productidDataGridViewTextBoxColumn"].Value.ToString();
-                text_order_quantity.Text = row.Cells["orderquantityDataGridViewTextBoxColumn"].Value.ToString();
+                dropDownList_order.SelectedValue = row.Cells["DataGridViewTextBoxColumn25"].Value.ToString();
+                dropDownList_product.SelectedValue = row.Cells["DataGridViewTextBoxColumn26"].Value.ToString();
+                text_order_quantity.Text = row.Cells["DataGridViewTextBoxColumn27"].Value.ToString();
             }
         }
 
@@ -1018,13 +1026,14 @@ namespace Alkobazar
             this.customersTableAdapter.Fill(this.dataSet.customers);
             this.employeesTableAdapter.Fill(this.dataSet.employees);
         }
-        public void ShowConfirmMessage(String function, String model_name)
+        public bool ShowConfirmMessage(String function, String model_name)
         {
             var addConfirm = MessageBox.Show(@"Are you sure you want to " + function + " given " + model_name, @"Confirm add",
                                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (addConfirm == DialogResult.No)
-                return;
-
+                return false;
+            else
+                return true;
         }
 
     }

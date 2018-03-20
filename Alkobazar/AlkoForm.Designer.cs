@@ -228,7 +228,7 @@ namespace Alkobazar
             this.tab_order_items.Location = new System.Drawing.Point(4, 25);
             this.tab_order_items.Name = "tab_order_items";
             this.tab_order_items.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_order_items.Size = new System.Drawing.Size(1310, 692);
+            this.tab_order_items.Size = new System.Drawing.Size(1742, 721);
             this.tab_order_items.TabIndex = 4;
             this.tab_order_items.Text = "Order Items";
             this.tab_order_items.UseVisualStyleBackColor = true;
@@ -246,7 +246,7 @@ namespace Alkobazar
             this.tab_layout_orders_item.Name = "tab_layout_orders_item";
             this.tab_layout_orders_item.RowCount = 1;
             this.tab_layout_orders_item.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tab_layout_orders_item.Size = new System.Drawing.Size(1304, 686);
+            this.tab_layout_orders_item.Size = new System.Drawing.Size(1736, 715);
             this.tab_layout_orders_item.TabIndex = 19;
             // 
             // tableLayoutPanel10
@@ -264,7 +264,7 @@ namespace Alkobazar
             this.tableLayoutPanel10.Controls.Add(this.label_quantity, 0, 2);
             this.tableLayoutPanel10.Controls.Add(this.dropDownList_order, 1, 0);
             this.tableLayoutPanel10.Controls.Add(this.text_order_quantity, 1, 2);
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(891, 4);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(1186, 4);
             this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 4;
@@ -273,7 +273,7 @@ namespace Alkobazar
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(409, 678);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(546, 707);
             this.tableLayoutPanel10.TabIndex = 18;
             // 
             // dropDownList_product
@@ -282,9 +282,9 @@ namespace Alkobazar
             this.dropDownList_product.DataSource = this.productsBindingSource1;
             this.dropDownList_product.DisplayMember = "name";
             this.dropDownList_product.FormattingEnabled = true;
-            this.dropDownList_product.Location = new System.Drawing.Point(160, 38);
+            this.dropDownList_product.Location = new System.Drawing.Point(212, 38);
             this.dropDownList_product.Name = "dropDownList_product";
-            this.dropDownList_product.Size = new System.Drawing.Size(246, 24);
+            this.dropDownList_product.Size = new System.Drawing.Size(326, 24);
             this.dropDownList_product.TabIndex = 14;
             this.dropDownList_product.ValueMember = "id";
             // 
@@ -307,7 +307,7 @@ namespace Alkobazar
             this.label_order.Location = new System.Drawing.Point(4, 7);
             this.label_order.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_order.Name = "label_order";
-            this.label_order.Size = new System.Drawing.Size(149, 20);
+            this.label_order.Size = new System.Drawing.Size(201, 20);
             this.label_order.TabIndex = 0;
             this.label_order.Text = "Order";
             // 
@@ -320,7 +320,7 @@ namespace Alkobazar
             this.label_product.Location = new System.Drawing.Point(4, 43);
             this.label_product.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_product.Name = "label_product";
-            this.label_product.Size = new System.Drawing.Size(149, 20);
+            this.label_product.Size = new System.Drawing.Size(201, 20);
             this.label_product.TabIndex = 2;
             this.label_product.Text = "Product";
             // 
@@ -333,13 +333,13 @@ namespace Alkobazar
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel11.Controls.Add(this.Button_add_items, 0, 0);
             this.tableLayoutPanel11.Controls.Add(this.Button_delete_items, 0, 1);
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(161, 107);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(213, 107);
             this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 2;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(244, 123);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(329, 123);
             this.tableLayoutPanel11.TabIndex = 8;
             // 
             // Button_add_items
@@ -349,7 +349,7 @@ namespace Alkobazar
             this.Button_add_items.Location = new System.Drawing.Point(4, 4);
             this.Button_add_items.Margin = new System.Windows.Forms.Padding(4);
             this.Button_add_items.Name = "Button_add_items";
-            this.Button_add_items.Size = new System.Drawing.Size(236, 53);
+            this.Button_add_items.Size = new System.Drawing.Size(321, 53);
             this.Button_add_items.TabIndex = 8;
             this.Button_add_items.Text = "Add";
             this.Button_add_items.UseVisualStyleBackColor = true;
@@ -362,7 +362,7 @@ namespace Alkobazar
             this.Button_delete_items.Location = new System.Drawing.Point(4, 65);
             this.Button_delete_items.Margin = new System.Windows.Forms.Padding(4);
             this.Button_delete_items.Name = "Button_delete_items";
-            this.Button_delete_items.Size = new System.Drawing.Size(236, 54);
+            this.Button_delete_items.Size = new System.Drawing.Size(321, 54);
             this.Button_delete_items.TabIndex = 10;
             this.Button_delete_items.Text = "Delete";
             this.Button_delete_items.UseVisualStyleBackColor = true;
@@ -377,7 +377,7 @@ namespace Alkobazar
             this.label_quantity.Location = new System.Drawing.Point(4, 77);
             this.label_quantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_quantity.Name = "label_quantity";
-            this.label_quantity.Size = new System.Drawing.Size(149, 20);
+            this.label_quantity.Size = new System.Drawing.Size(201, 20);
             this.label_quantity.TabIndex = 12;
             this.label_quantity.Text = "Quantity";
             // 
@@ -387,9 +387,9 @@ namespace Alkobazar
             this.dropDownList_order.DataSource = this.ordersBindingSource1;
             this.dropDownList_order.DisplayMember = "order_number";
             this.dropDownList_order.FormattingEnabled = true;
-            this.dropDownList_order.Location = new System.Drawing.Point(160, 3);
+            this.dropDownList_order.Location = new System.Drawing.Point(212, 3);
             this.dropDownList_order.Name = "dropDownList_order";
-            this.dropDownList_order.Size = new System.Drawing.Size(246, 24);
+            this.dropDownList_order.Size = new System.Drawing.Size(326, 24);
             this.dropDownList_order.TabIndex = 13;
             this.dropDownList_order.ValueMember = "id";
             // 
@@ -400,9 +400,9 @@ namespace Alkobazar
             // 
             // text_order_quantity
             // 
-            this.text_order_quantity.Location = new System.Drawing.Point(160, 74);
+            this.text_order_quantity.Location = new System.Drawing.Point(212, 74);
             this.text_order_quantity.Name = "text_order_quantity";
-            this.text_order_quantity.Size = new System.Drawing.Size(246, 22);
+            this.text_order_quantity.Size = new System.Drawing.Size(326, 22);
             this.text_order_quantity.TabIndex = 15;
             // 
             // Grid_order_items
@@ -429,7 +429,7 @@ namespace Alkobazar
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Grid_order_items.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.Grid_order_items.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grid_order_items.Size = new System.Drawing.Size(879, 678);
+            this.Grid_order_items.Size = new System.Drawing.Size(1174, 707);
             this.Grid_order_items.TabIndex = 13;
             this.Grid_order_items.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_order_items_CellContentClick);
             // 
@@ -472,7 +472,7 @@ namespace Alkobazar
             this.tab_orders.Location = new System.Drawing.Point(4, 25);
             this.tab_orders.Name = "tab_orders";
             this.tab_orders.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_orders.Size = new System.Drawing.Size(1310, 692);
+            this.tab_orders.Size = new System.Drawing.Size(1742, 721);
             this.tab_orders.TabIndex = 3;
             this.tab_orders.Text = "Orders";
             this.tab_orders.UseVisualStyleBackColor = true;
@@ -490,7 +490,7 @@ namespace Alkobazar
             this.tab_layout_orders.Name = "tab_layout_orders";
             this.tab_layout_orders.RowCount = 1;
             this.tab_layout_orders.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tab_layout_orders.Size = new System.Drawing.Size(1304, 686);
+            this.tab_layout_orders.Size = new System.Drawing.Size(1736, 715);
             this.tab_layout_orders.TabIndex = 18;
             // 
             // tableLayoutPanel7
@@ -501,7 +501,6 @@ namespace Alkobazar
             this.tableLayoutPanel7.ColumnCount = 2;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.65281F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.34719F));
-            this.tableLayoutPanel7.Controls.Add(this.dropDownList_employee, 1, 1);
             this.tableLayoutPanel7.Controls.Add(this.label_customer_id, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.label_employee_id, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel8, 1, 4);
@@ -511,7 +510,8 @@ namespace Alkobazar
             this.tableLayoutPanel7.Controls.Add(this.datePicker_deadline, 1, 3);
             this.tableLayoutPanel7.Controls.Add(this.text_order_number, 1, 2);
             this.tableLayoutPanel7.Controls.Add(this.label_order_number, 0, 2);
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(891, 4);
+            this.tableLayoutPanel7.Controls.Add(this.dropDownList_employee, 1, 1);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(1186, 4);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 5;
@@ -521,7 +521,7 @@ namespace Alkobazar
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(409, 678);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(546, 707);
             this.tableLayoutPanel7.TabIndex = 17;
             // 
             // dropDownList_employee
@@ -530,9 +530,9 @@ namespace Alkobazar
             this.dropDownList_employee.DataSource = this.employeesBindingSource1;
             this.dropDownList_employee.DisplayMember = "pesel";
             this.dropDownList_employee.FormattingEnabled = true;
-            this.dropDownList_employee.Location = new System.Drawing.Point(156, 38);
+            this.dropDownList_employee.Location = new System.Drawing.Point(208, 38);
             this.dropDownList_employee.Name = "dropDownList_employee";
-            this.dropDownList_employee.Size = new System.Drawing.Size(246, 24);
+            this.dropDownList_employee.Size = new System.Drawing.Size(330, 24);
             this.dropDownList_employee.TabIndex = 14;
             this.dropDownList_employee.ValueMember = "id";
             // 
@@ -550,7 +550,7 @@ namespace Alkobazar
             this.label_customer_id.Location = new System.Drawing.Point(4, 7);
             this.label_customer_id.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_customer_id.Name = "label_customer_id";
-            this.label_customer_id.Size = new System.Drawing.Size(145, 20);
+            this.label_customer_id.Size = new System.Drawing.Size(197, 20);
             this.label_customer_id.TabIndex = 0;
             this.label_customer_id.Text = "Customer";
             // 
@@ -563,7 +563,7 @@ namespace Alkobazar
             this.label_employee_id.Location = new System.Drawing.Point(4, 43);
             this.label_employee_id.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_employee_id.Name = "label_employee_id";
-            this.label_employee_id.Size = new System.Drawing.Size(145, 20);
+            this.label_employee_id.Size = new System.Drawing.Size(197, 20);
             this.label_employee_id.TabIndex = 2;
             this.label_employee_id.Text = "Employee";
             // 
@@ -577,14 +577,14 @@ namespace Alkobazar
             this.tableLayoutPanel8.Controls.Add(this.Button_add_orders, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.Button_delete_orders, 0, 1);
             this.tableLayoutPanel8.Controls.Add(this.Button_update_orders, 0, 2);
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(157, 143);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(209, 143);
             this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 3;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 76F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(248, 221);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(333, 221);
             this.tableLayoutPanel8.TabIndex = 8;
             // 
             // Button_add_orders
@@ -594,7 +594,7 @@ namespace Alkobazar
             this.Button_add_orders.Location = new System.Drawing.Point(4, 4);
             this.Button_add_orders.Margin = new System.Windows.Forms.Padding(4);
             this.Button_add_orders.Name = "Button_add_orders";
-            this.Button_add_orders.Size = new System.Drawing.Size(240, 64);
+            this.Button_add_orders.Size = new System.Drawing.Size(325, 64);
             this.Button_add_orders.TabIndex = 8;
             this.Button_add_orders.Text = "Add";
             this.Button_add_orders.UseVisualStyleBackColor = true;
@@ -607,7 +607,7 @@ namespace Alkobazar
             this.Button_delete_orders.Location = new System.Drawing.Point(4, 76);
             this.Button_delete_orders.Margin = new System.Windows.Forms.Padding(4);
             this.Button_delete_orders.Name = "Button_delete_orders";
-            this.Button_delete_orders.Size = new System.Drawing.Size(240, 64);
+            this.Button_delete_orders.Size = new System.Drawing.Size(325, 64);
             this.Button_delete_orders.TabIndex = 10;
             this.Button_delete_orders.Text = "Delete";
             this.Button_delete_orders.UseVisualStyleBackColor = true;
@@ -617,7 +617,7 @@ namespace Alkobazar
             // 
             this.Button_update_orders.Location = new System.Drawing.Point(3, 147);
             this.Button_update_orders.Name = "Button_update_orders";
-            this.Button_update_orders.Size = new System.Drawing.Size(237, 71);
+            this.Button_update_orders.Size = new System.Drawing.Size(326, 71);
             this.Button_update_orders.TabIndex = 11;
             this.Button_update_orders.Text = "Update";
             this.Button_update_orders.UseVisualStyleBackColor = true;
@@ -638,7 +638,7 @@ namespace Alkobazar
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 169F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 238F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(145, 186);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(197, 186);
             this.tableLayoutPanel9.TabIndex = 9;
             // 
             // Button_raport
@@ -649,7 +649,7 @@ namespace Alkobazar
             this.Button_raport.Location = new System.Drawing.Point(4, 93);
             this.Button_raport.Margin = new System.Windows.Forms.Padding(4);
             this.Button_raport.Name = "Button_raport";
-            this.Button_raport.Size = new System.Drawing.Size(137, 93);
+            this.Button_raport.Size = new System.Drawing.Size(189, 93);
             this.Button_raport.TabIndex = 1;
             this.Button_raport.Text = "RAPORT";
             this.Button_raport.UseVisualStyleBackColor = true;
@@ -662,7 +662,7 @@ namespace Alkobazar
             this.Button_invoice.Location = new System.Drawing.Point(4, 4);
             this.Button_invoice.Margin = new System.Windows.Forms.Padding(4);
             this.Button_invoice.Name = "Button_invoice";
-            this.Button_invoice.Size = new System.Drawing.Size(137, 81);
+            this.Button_invoice.Size = new System.Drawing.Size(189, 81);
             this.Button_invoice.TabIndex = 0;
             this.Button_invoice.Text = "INVOICE";
             this.Button_invoice.UseVisualStyleBackColor = true;
@@ -677,7 +677,7 @@ namespace Alkobazar
             this.label_deadline.Location = new System.Drawing.Point(4, 112);
             this.label_deadline.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_deadline.Name = "label_deadline";
-            this.label_deadline.Size = new System.Drawing.Size(145, 20);
+            this.label_deadline.Size = new System.Drawing.Size(197, 20);
             this.label_deadline.TabIndex = 12;
             this.label_deadline.Text = "Deadline";
             // 
@@ -687,9 +687,9 @@ namespace Alkobazar
             this.dropDownList_customer.DataSource = this.customersBindingSource1;
             this.dropDownList_customer.DisplayMember = "company_name";
             this.dropDownList_customer.FormattingEnabled = true;
-            this.dropDownList_customer.Location = new System.Drawing.Point(156, 3);
+            this.dropDownList_customer.Location = new System.Drawing.Point(208, 3);
             this.dropDownList_customer.Name = "dropDownList_customer";
-            this.dropDownList_customer.Size = new System.Drawing.Size(246, 24);
+            this.dropDownList_customer.Size = new System.Drawing.Size(330, 24);
             this.dropDownList_customer.TabIndex = 13;
             this.dropDownList_customer.ValueMember = "id";
             // 
@@ -700,16 +700,16 @@ namespace Alkobazar
             // 
             // datePicker_deadline
             // 
-            this.datePicker_deadline.Location = new System.Drawing.Point(156, 109);
+            this.datePicker_deadline.Location = new System.Drawing.Point(208, 109);
             this.datePicker_deadline.Name = "datePicker_deadline";
-            this.datePicker_deadline.Size = new System.Drawing.Size(246, 22);
+            this.datePicker_deadline.Size = new System.Drawing.Size(330, 22);
             this.datePicker_deadline.TabIndex = 15;
             // 
             // text_order_number
             // 
-            this.text_order_number.Location = new System.Drawing.Point(156, 74);
+            this.text_order_number.Location = new System.Drawing.Point(208, 74);
             this.text_order_number.Name = "text_order_number";
-            this.text_order_number.Size = new System.Drawing.Size(246, 22);
+            this.text_order_number.Size = new System.Drawing.Size(330, 22);
             this.text_order_number.TabIndex = 17;
             // 
             // label_order_number
@@ -750,7 +750,7 @@ namespace Alkobazar
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Grid_orders.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.Grid_orders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grid_orders.Size = new System.Drawing.Size(879, 678);
+            this.Grid_orders.Size = new System.Drawing.Size(1174, 707);
             this.Grid_orders.TabIndex = 13;
             this.Grid_orders.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_orders_CellContentClick);
             // 
@@ -807,7 +807,7 @@ namespace Alkobazar
             this.tab_employees.Location = new System.Drawing.Point(4, 25);
             this.tab_employees.Name = "tab_employees";
             this.tab_employees.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_employees.Size = new System.Drawing.Size(1310, 692);
+            this.tab_employees.Size = new System.Drawing.Size(1742, 721);
             this.tab_employees.TabIndex = 2;
             this.tab_employees.Text = "Employees";
             this.tab_employees.UseVisualStyleBackColor = true;
@@ -825,7 +825,7 @@ namespace Alkobazar
             this.tab_layout_employees.Name = "tab_layout_employees";
             this.tab_layout_employees.RowCount = 1;
             this.tab_layout_employees.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tab_layout_employees.Size = new System.Drawing.Size(1304, 686);
+            this.tab_layout_employees.Size = new System.Drawing.Size(1736, 715);
             this.tab_layout_employees.TabIndex = 17;
             // 
             // tableLayoutPanel4
@@ -848,7 +848,7 @@ namespace Alkobazar
             this.tableLayoutPanel4.Controls.Add(this.label_address, 0, 2);
             this.tableLayoutPanel4.Controls.Add(this.label_phone, 0, 3);
             this.tableLayoutPanel4.Controls.Add(this.label_pesel, 0, 4);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(891, 4);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(1186, 4);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 6;
@@ -859,34 +859,34 @@ namespace Alkobazar
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(409, 678);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(546, 707);
             this.tableLayoutPanel4.TabIndex = 16;
             // 
             // text_pesel
             // 
             this.text_pesel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.text_pesel.Location = new System.Drawing.Point(161, 141);
+            this.text_pesel.Location = new System.Drawing.Point(213, 141);
             this.text_pesel.Margin = new System.Windows.Forms.Padding(4);
             this.text_pesel.Name = "text_pesel";
-            this.text_pesel.Size = new System.Drawing.Size(244, 22);
+            this.text_pesel.Size = new System.Drawing.Size(329, 22);
             this.text_pesel.TabIndex = 15;
             // 
             // text_phone
             // 
             this.text_phone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.text_phone.Location = new System.Drawing.Point(161, 109);
+            this.text_phone.Location = new System.Drawing.Point(213, 109);
             this.text_phone.Margin = new System.Windows.Forms.Padding(4);
             this.text_phone.Name = "text_phone";
-            this.text_phone.Size = new System.Drawing.Size(244, 22);
+            this.text_phone.Size = new System.Drawing.Size(329, 22);
             this.text_phone.TabIndex = 14;
             // 
             // text_firstname
             // 
             this.text_firstname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.text_firstname.Location = new System.Drawing.Point(161, 6);
+            this.text_firstname.Location = new System.Drawing.Point(213, 6);
             this.text_firstname.Margin = new System.Windows.Forms.Padding(4);
             this.text_firstname.Name = "text_firstname";
-            this.text_firstname.Size = new System.Drawing.Size(244, 22);
+            this.text_firstname.Size = new System.Drawing.Size(329, 22);
             this.text_firstname.TabIndex = 1;
             // 
             // label_firstname
@@ -898,7 +898,7 @@ namespace Alkobazar
             this.label_firstname.Location = new System.Drawing.Point(4, 7);
             this.label_firstname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_firstname.Name = "label_firstname";
-            this.label_firstname.Size = new System.Drawing.Size(149, 20);
+            this.label_firstname.Size = new System.Drawing.Size(201, 20);
             this.label_firstname.TabIndex = 0;
             this.label_firstname.Text = "First Name";
             // 
@@ -911,26 +911,26 @@ namespace Alkobazar
             this.label_lastname.Location = new System.Drawing.Point(4, 43);
             this.label_lastname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_lastname.Name = "label_lastname";
-            this.label_lastname.Size = new System.Drawing.Size(149, 20);
+            this.label_lastname.Size = new System.Drawing.Size(201, 20);
             this.label_lastname.TabIndex = 2;
             this.label_lastname.Text = "Last Name";
             // 
             // text_lastname
             // 
             this.text_lastname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.text_lastname.Location = new System.Drawing.Point(161, 42);
+            this.text_lastname.Location = new System.Drawing.Point(213, 42);
             this.text_lastname.Margin = new System.Windows.Forms.Padding(4);
             this.text_lastname.Name = "text_lastname";
-            this.text_lastname.Size = new System.Drawing.Size(244, 22);
+            this.text_lastname.Size = new System.Drawing.Size(329, 22);
             this.text_lastname.TabIndex = 3;
             // 
             // text_address
             // 
             this.text_address.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.text_address.Location = new System.Drawing.Point(161, 76);
+            this.text_address.Location = new System.Drawing.Point(213, 76);
             this.text_address.Margin = new System.Windows.Forms.Padding(4);
             this.text_address.Name = "text_address";
-            this.text_address.Size = new System.Drawing.Size(244, 22);
+            this.text_address.Size = new System.Drawing.Size(329, 22);
             this.text_address.TabIndex = 7;
             // 
             // tableLayoutPanel5
@@ -941,13 +941,13 @@ namespace Alkobazar
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.22951F));
             this.tableLayoutPanel5.Controls.Add(this.Button_get_stats, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel13, 0, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(161, 172);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(213, 172);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(244, 239);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(329, 239);
             this.tableLayoutPanel5.TabIndex = 8;
             // 
             // Button_get_stats
@@ -957,7 +957,7 @@ namespace Alkobazar
             this.Button_get_stats.Location = new System.Drawing.Point(4, 131);
             this.Button_get_stats.Margin = new System.Windows.Forms.Padding(4);
             this.Button_get_stats.Name = "Button_get_stats";
-            this.Button_get_stats.Size = new System.Drawing.Size(236, 104);
+            this.Button_get_stats.Size = new System.Drawing.Size(321, 104);
             this.Button_get_stats.TabIndex = 20;
             this.Button_get_stats.Text = "Get Stats";
             this.Button_get_stats.UseVisualStyleBackColor = true;
@@ -980,7 +980,7 @@ namespace Alkobazar
             this.tableLayoutPanel13.RowCount = 2;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(236, 119);
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(321, 119);
             this.tableLayoutPanel13.TabIndex = 19;
             // 
             // Button_add_employees
@@ -990,7 +990,7 @@ namespace Alkobazar
             this.Button_add_employees.Location = new System.Drawing.Point(4, 4);
             this.Button_add_employees.Margin = new System.Windows.Forms.Padding(4);
             this.Button_add_employees.Name = "Button_add_employees";
-            this.Button_add_employees.Size = new System.Drawing.Size(110, 51);
+            this.Button_add_employees.Size = new System.Drawing.Size(152, 51);
             this.Button_add_employees.TabIndex = 8;
             this.Button_add_employees.Text = "Add";
             this.Button_add_employees.UseVisualStyleBackColor = true;
@@ -1000,10 +1000,10 @@ namespace Alkobazar
             // 
             this.Button_clear_employees.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button_clear_employees.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Button_clear_employees.Location = new System.Drawing.Point(122, 63);
+            this.Button_clear_employees.Location = new System.Drawing.Point(164, 63);
             this.Button_clear_employees.Margin = new System.Windows.Forms.Padding(4);
             this.Button_clear_employees.Name = "Button_clear_employees";
-            this.Button_clear_employees.Size = new System.Drawing.Size(110, 52);
+            this.Button_clear_employees.Size = new System.Drawing.Size(153, 52);
             this.Button_clear_employees.TabIndex = 13;
             this.Button_clear_employees.Text = "Clear fields";
             this.Button_clear_employees.UseVisualStyleBackColor = true;
@@ -1013,10 +1013,10 @@ namespace Alkobazar
             // 
             this.Button_update_employees.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button_update_employees.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Button_update_employees.Location = new System.Drawing.Point(122, 4);
+            this.Button_update_employees.Location = new System.Drawing.Point(164, 4);
             this.Button_update_employees.Margin = new System.Windows.Forms.Padding(4);
             this.Button_update_employees.Name = "Button_update_employees";
-            this.Button_update_employees.Size = new System.Drawing.Size(110, 51);
+            this.Button_update_employees.Size = new System.Drawing.Size(153, 51);
             this.Button_update_employees.TabIndex = 12;
             this.Button_update_employees.Text = "Update";
             this.Button_update_employees.UseVisualStyleBackColor = true;
@@ -1029,7 +1029,7 @@ namespace Alkobazar
             this.Button_delete_employees.Location = new System.Drawing.Point(4, 63);
             this.Button_delete_employees.Margin = new System.Windows.Forms.Padding(4);
             this.Button_delete_employees.Name = "Button_delete_employees";
-            this.Button_delete_employees.Size = new System.Drawing.Size(110, 52);
+            this.Button_delete_employees.Size = new System.Drawing.Size(152, 52);
             this.Button_delete_employees.TabIndex = 10;
             this.Button_delete_employees.Text = "Delete";
             this.Button_delete_employees.UseVisualStyleBackColor = true;
@@ -1052,7 +1052,7 @@ namespace Alkobazar
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(149, 190);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(201, 190);
             this.tableLayoutPanel6.TabIndex = 9;
             // 
             // button2
@@ -1072,7 +1072,7 @@ namespace Alkobazar
             this.Button_export_employees.Location = new System.Drawing.Point(4, 71);
             this.Button_export_employees.Margin = new System.Windows.Forms.Padding(4);
             this.Button_export_employees.Name = "Button_export_employees";
-            this.Button_export_employees.Size = new System.Drawing.Size(141, 58);
+            this.Button_export_employees.Size = new System.Drawing.Size(193, 58);
             this.Button_export_employees.TabIndex = 0;
             this.Button_export_employees.Text = "EXPORT";
             this.Button_export_employees.UseVisualStyleBackColor = true;
@@ -1085,7 +1085,7 @@ namespace Alkobazar
             this.Button_import_employees.Location = new System.Drawing.Point(4, 4);
             this.Button_import_employees.Margin = new System.Windows.Forms.Padding(4);
             this.Button_import_employees.Name = "Button_import_employees";
-            this.Button_import_employees.Size = new System.Drawing.Size(141, 59);
+            this.Button_import_employees.Size = new System.Drawing.Size(193, 59);
             this.Button_import_employees.TabIndex = 1;
             this.Button_import_employees.Text = "IMPORT";
             this.Button_import_employees.UseVisualStyleBackColor = true;
@@ -1100,7 +1100,7 @@ namespace Alkobazar
             this.label_address.Location = new System.Drawing.Point(4, 77);
             this.label_address.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_address.Name = "label_address";
-            this.label_address.Size = new System.Drawing.Size(149, 20);
+            this.label_address.Size = new System.Drawing.Size(201, 20);
             this.label_address.TabIndex = 6;
             this.label_address.Text = "Address";
             // 
@@ -1113,7 +1113,7 @@ namespace Alkobazar
             this.label_phone.Location = new System.Drawing.Point(4, 110);
             this.label_phone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_phone.Name = "label_phone";
-            this.label_phone.Size = new System.Drawing.Size(149, 20);
+            this.label_phone.Size = new System.Drawing.Size(201, 20);
             this.label_phone.TabIndex = 11;
             this.label_phone.Text = "Phone";
             // 
@@ -1126,7 +1126,7 @@ namespace Alkobazar
             this.label_pesel.Location = new System.Drawing.Point(4, 142);
             this.label_pesel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_pesel.Name = "label_pesel";
-            this.label_pesel.Size = new System.Drawing.Size(149, 20);
+            this.label_pesel.Size = new System.Drawing.Size(201, 20);
             this.label_pesel.TabIndex = 12;
             this.label_pesel.Text = "Pesel";
             // 
@@ -1156,7 +1156,7 @@ namespace Alkobazar
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Grid_employees.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.Grid_employees.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grid_employees.Size = new System.Drawing.Size(879, 678);
+            this.Grid_employees.Size = new System.Drawing.Size(1174, 707);
             this.Grid_employees.TabIndex = 13;
             this.Grid_employees.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_employees_CellContentClick);
             // 
@@ -1213,7 +1213,7 @@ namespace Alkobazar
             this.tab_customers.Location = new System.Drawing.Point(4, 25);
             this.tab_customers.Name = "tab_customers";
             this.tab_customers.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_customers.Size = new System.Drawing.Size(1310, 692);
+            this.tab_customers.Size = new System.Drawing.Size(1742, 721);
             this.tab_customers.TabIndex = 1;
             this.tab_customers.Text = "Customers";
             this.tab_customers.UseVisualStyleBackColor = true;
@@ -1231,7 +1231,7 @@ namespace Alkobazar
             this.tab_layout_customers.Name = "tab_layout_customers";
             this.tab_layout_customers.RowCount = 1;
             this.tab_layout_customers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tab_layout_customers.Size = new System.Drawing.Size(1304, 686);
+            this.tab_layout_customers.Size = new System.Drawing.Size(1736, 715);
             this.tab_layout_customers.TabIndex = 16;
             // 
             // inputLayout
@@ -1250,7 +1250,7 @@ namespace Alkobazar
             this.inputLayout.Controls.Add(this.text_phone_number, 1, 2);
             this.inputLayout.Controls.Add(this.labelPhoneNumber, 0, 2);
             this.inputLayout.Controls.Add(this.buttonsLayout1, 0, 3);
-            this.inputLayout.Location = new System.Drawing.Point(891, 4);
+            this.inputLayout.Location = new System.Drawing.Point(1186, 4);
             this.inputLayout.Margin = new System.Windows.Forms.Padding(4);
             this.inputLayout.Name = "inputLayout";
             this.inputLayout.RowCount = 5;
@@ -1260,7 +1260,7 @@ namespace Alkobazar
             this.inputLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.inputLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.inputLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.inputLayout.Size = new System.Drawing.Size(409, 678);
+            this.inputLayout.Size = new System.Drawing.Size(546, 707);
             this.inputLayout.TabIndex = 14;
             // 
             // tableLayoutPanel12
@@ -1274,13 +1274,13 @@ namespace Alkobazar
             this.tableLayoutPanel12.Controls.Add(this.Button_clear_customers, 1, 1);
             this.tableLayoutPanel12.Controls.Add(this.Button_update_customers, 1, 0);
             this.tableLayoutPanel12.Controls.Add(this.Button_delete_customers, 0, 1);
-            this.tableLayoutPanel12.Location = new System.Drawing.Point(161, 124);
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(213, 124);
             this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 2;
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(244, 123);
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(329, 123);
             this.tableLayoutPanel12.TabIndex = 18;
             // 
             // Button_add_customers
@@ -1290,7 +1290,7 @@ namespace Alkobazar
             this.Button_add_customers.Location = new System.Drawing.Point(4, 4);
             this.Button_add_customers.Margin = new System.Windows.Forms.Padding(4);
             this.Button_add_customers.Name = "Button_add_customers";
-            this.Button_add_customers.Size = new System.Drawing.Size(114, 53);
+            this.Button_add_customers.Size = new System.Drawing.Size(156, 53);
             this.Button_add_customers.TabIndex = 8;
             this.Button_add_customers.Text = "Add";
             this.Button_add_customers.UseVisualStyleBackColor = true;
@@ -1300,10 +1300,10 @@ namespace Alkobazar
             // 
             this.Button_clear_customers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button_clear_customers.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Button_clear_customers.Location = new System.Drawing.Point(126, 65);
+            this.Button_clear_customers.Location = new System.Drawing.Point(168, 65);
             this.Button_clear_customers.Margin = new System.Windows.Forms.Padding(4);
             this.Button_clear_customers.Name = "Button_clear_customers";
-            this.Button_clear_customers.Size = new System.Drawing.Size(114, 54);
+            this.Button_clear_customers.Size = new System.Drawing.Size(157, 54);
             this.Button_clear_customers.TabIndex = 13;
             this.Button_clear_customers.Text = "Clear fields";
             this.Button_clear_customers.UseVisualStyleBackColor = true;
@@ -1313,10 +1313,10 @@ namespace Alkobazar
             // 
             this.Button_update_customers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button_update_customers.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Button_update_customers.Location = new System.Drawing.Point(126, 4);
+            this.Button_update_customers.Location = new System.Drawing.Point(168, 4);
             this.Button_update_customers.Margin = new System.Windows.Forms.Padding(4);
             this.Button_update_customers.Name = "Button_update_customers";
-            this.Button_update_customers.Size = new System.Drawing.Size(114, 53);
+            this.Button_update_customers.Size = new System.Drawing.Size(157, 53);
             this.Button_update_customers.TabIndex = 12;
             this.Button_update_customers.Text = "Update";
             this.Button_update_customers.UseVisualStyleBackColor = true;
@@ -1329,7 +1329,7 @@ namespace Alkobazar
             this.Button_delete_customers.Location = new System.Drawing.Point(4, 65);
             this.Button_delete_customers.Margin = new System.Windows.Forms.Padding(4);
             this.Button_delete_customers.Name = "Button_delete_customers";
-            this.Button_delete_customers.Size = new System.Drawing.Size(114, 54);
+            this.Button_delete_customers.Size = new System.Drawing.Size(156, 54);
             this.Button_delete_customers.TabIndex = 10;
             this.Button_delete_customers.Text = "Delete";
             this.Button_delete_customers.UseVisualStyleBackColor = true;
@@ -1338,10 +1338,10 @@ namespace Alkobazar
             // text_company_name
             // 
             this.text_company_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.text_company_name.Location = new System.Drawing.Point(161, 7);
+            this.text_company_name.Location = new System.Drawing.Point(213, 7);
             this.text_company_name.Margin = new System.Windows.Forms.Padding(4);
             this.text_company_name.Name = "text_company_name";
-            this.text_company_name.Size = new System.Drawing.Size(244, 22);
+            this.text_company_name.Size = new System.Drawing.Size(329, 22);
             this.text_company_name.TabIndex = 1;
             // 
             // label_company_name
@@ -1353,7 +1353,7 @@ namespace Alkobazar
             this.label_company_name.Location = new System.Drawing.Point(4, 8);
             this.label_company_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_company_name.Name = "label_company_name";
-            this.label_company_name.Size = new System.Drawing.Size(149, 20);
+            this.label_company_name.Size = new System.Drawing.Size(201, 20);
             this.label_company_name.TabIndex = 0;
             this.label_company_name.Text = "Company Name";
             // 
@@ -1366,26 +1366,26 @@ namespace Alkobazar
             this.label_shipment_address.Location = new System.Drawing.Point(4, 48);
             this.label_shipment_address.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_shipment_address.Name = "label_shipment_address";
-            this.label_shipment_address.Size = new System.Drawing.Size(149, 20);
+            this.label_shipment_address.Size = new System.Drawing.Size(201, 20);
             this.label_shipment_address.TabIndex = 2;
             this.label_shipment_address.Text = "Shipment Address";
             // 
             // text_shipment_address
             // 
             this.text_shipment_address.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.text_shipment_address.Location = new System.Drawing.Point(161, 47);
+            this.text_shipment_address.Location = new System.Drawing.Point(213, 47);
             this.text_shipment_address.Margin = new System.Windows.Forms.Padding(4);
             this.text_shipment_address.Name = "text_shipment_address";
-            this.text_shipment_address.Size = new System.Drawing.Size(244, 22);
+            this.text_shipment_address.Size = new System.Drawing.Size(329, 22);
             this.text_shipment_address.TabIndex = 3;
             // 
             // text_phone_number
             // 
             this.text_phone_number.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.text_phone_number.Location = new System.Drawing.Point(161, 89);
+            this.text_phone_number.Location = new System.Drawing.Point(213, 89);
             this.text_phone_number.Margin = new System.Windows.Forms.Padding(4);
             this.text_phone_number.Name = "text_phone_number";
-            this.text_phone_number.Size = new System.Drawing.Size(244, 22);
+            this.text_phone_number.Size = new System.Drawing.Size(329, 22);
             this.text_phone_number.TabIndex = 7;
             // 
             // labelPhoneNumber
@@ -1397,7 +1397,7 @@ namespace Alkobazar
             this.labelPhoneNumber.Location = new System.Drawing.Point(4, 90);
             this.labelPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPhoneNumber.Name = "labelPhoneNumber";
-            this.labelPhoneNumber.Size = new System.Drawing.Size(149, 20);
+            this.labelPhoneNumber.Size = new System.Drawing.Size(201, 20);
             this.labelPhoneNumber.TabIndex = 6;
             this.labelPhoneNumber.Text = "Phone number";
             // 
@@ -1417,7 +1417,7 @@ namespace Alkobazar
             this.buttonsLayout1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.buttonsLayout1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 69F));
             this.buttonsLayout1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
-            this.buttonsLayout1.Size = new System.Drawing.Size(149, 198);
+            this.buttonsLayout1.Size = new System.Drawing.Size(201, 198);
             this.buttonsLayout1.TabIndex = 9;
             // 
             // Button_export_customers
@@ -1427,7 +1427,7 @@ namespace Alkobazar
             this.Button_export_customers.Location = new System.Drawing.Point(4, 68);
             this.Button_export_customers.Margin = new System.Windows.Forms.Padding(4);
             this.Button_export_customers.Name = "Button_export_customers";
-            this.Button_export_customers.Size = new System.Drawing.Size(141, 61);
+            this.Button_export_customers.Size = new System.Drawing.Size(193, 61);
             this.Button_export_customers.TabIndex = 0;
             this.Button_export_customers.Text = "EXPORT";
             this.Button_export_customers.UseVisualStyleBackColor = true;
@@ -1440,7 +1440,7 @@ namespace Alkobazar
             this.Button_import_customers.Location = new System.Drawing.Point(4, 4);
             this.Button_import_customers.Margin = new System.Windows.Forms.Padding(4);
             this.Button_import_customers.Name = "Button_import_customers";
-            this.Button_import_customers.Size = new System.Drawing.Size(141, 56);
+            this.Button_import_customers.Size = new System.Drawing.Size(193, 56);
             this.Button_import_customers.TabIndex = 1;
             this.Button_import_customers.Text = "IMPORT";
             this.Button_import_customers.UseVisualStyleBackColor = true;
@@ -1480,7 +1480,7 @@ namespace Alkobazar
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Grid_customers.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.Grid_customers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grid_customers.Size = new System.Drawing.Size(879, 678);
+            this.Grid_customers.Size = new System.Drawing.Size(1174, 707);
             this.Grid_customers.TabIndex = 13;
             this.Grid_customers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_customers_CellContentClick);
             // 
@@ -1523,7 +1523,7 @@ namespace Alkobazar
             this.tab_products.Location = new System.Drawing.Point(4, 25);
             this.tab_products.Name = "tab_products";
             this.tab_products.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_products.Size = new System.Drawing.Size(1310, 692);
+            this.tab_products.Size = new System.Drawing.Size(1742, 721);
             this.tab_products.TabIndex = 0;
             this.tab_products.Text = "Products";
             this.tab_products.UseVisualStyleBackColor = true;
@@ -1541,7 +1541,7 @@ namespace Alkobazar
             this.tab_layout_products.Name = "tab_layout_products";
             this.tab_layout_products.RowCount = 1;
             this.tab_layout_products.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tab_layout_products.Size = new System.Drawing.Size(1304, 686);
+            this.tab_layout_products.Size = new System.Drawing.Size(1736, 715);
             this.tab_layout_products.TabIndex = 15;
             // 
             // tableLayoutPanel1
@@ -1566,7 +1566,7 @@ namespace Alkobazar
             this.tableLayoutPanel1.Controls.Add(this.text_product_name, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.text_size_in_liters, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.text_alcohol_content, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(891, 4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(1186, 4);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
@@ -1578,25 +1578,25 @@ namespace Alkobazar
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(409, 678);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(546, 707);
             this.tableLayoutPanel1.TabIndex = 15;
             // 
             // text_product_description
             // 
             this.text_product_description.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.text_product_description.Location = new System.Drawing.Point(161, 141);
+            this.text_product_description.Location = new System.Drawing.Point(213, 141);
             this.text_product_description.Margin = new System.Windows.Forms.Padding(4);
             this.text_product_description.Name = "text_product_description";
-            this.text_product_description.Size = new System.Drawing.Size(244, 22);
+            this.text_product_description.Size = new System.Drawing.Size(329, 22);
             this.text_product_description.TabIndex = 15;
             // 
             // text_price
             // 
             this.text_price.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.text_price.Location = new System.Drawing.Point(161, 109);
+            this.text_price.Location = new System.Drawing.Point(213, 109);
             this.text_price.Margin = new System.Windows.Forms.Padding(4);
             this.text_price.Name = "text_price";
-            this.text_price.Size = new System.Drawing.Size(244, 22);
+            this.text_price.Size = new System.Drawing.Size(329, 22);
             this.text_price.TabIndex = 14;
             // 
             // label_product_name
@@ -1608,7 +1608,7 @@ namespace Alkobazar
             this.label_product_name.Location = new System.Drawing.Point(4, 7);
             this.label_product_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_product_name.Name = "label_product_name";
-            this.label_product_name.Size = new System.Drawing.Size(149, 20);
+            this.label_product_name.Size = new System.Drawing.Size(201, 20);
             this.label_product_name.TabIndex = 0;
             this.label_product_name.Text = "Name";
             // 
@@ -1621,7 +1621,7 @@ namespace Alkobazar
             this.label_alcohol_content.Location = new System.Drawing.Point(4, 43);
             this.label_alcohol_content.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_alcohol_content.Name = "label_alcohol_content";
-            this.label_alcohol_content.Size = new System.Drawing.Size(149, 20);
+            this.label_alcohol_content.Size = new System.Drawing.Size(201, 20);
             this.label_alcohol_content.TabIndex = 2;
             this.label_alcohol_content.Text = "Alcohol Content";
             // 
@@ -1641,7 +1641,7 @@ namespace Alkobazar
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 68F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(149, 197);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(201, 197);
             this.tableLayoutPanel3.TabIndex = 9;
             // 
             // Button_refresh_products
@@ -1651,7 +1651,7 @@ namespace Alkobazar
             this.Button_refresh_products.Location = new System.Drawing.Point(4, 139);
             this.Button_refresh_products.Margin = new System.Windows.Forms.Padding(4);
             this.Button_refresh_products.Name = "Button_refresh_products";
-            this.Button_refresh_products.Size = new System.Drawing.Size(141, 54);
+            this.Button_refresh_products.Size = new System.Drawing.Size(193, 54);
             this.Button_refresh_products.TabIndex = 2;
             this.Button_refresh_products.Text = "REFRESH";
             this.Button_refresh_products.UseVisualStyleBackColor = true;
@@ -1664,7 +1664,7 @@ namespace Alkobazar
             this.Button_export_products.Location = new System.Drawing.Point(4, 71);
             this.Button_export_products.Margin = new System.Windows.Forms.Padding(4);
             this.Button_export_products.Name = "Button_export_products";
-            this.Button_export_products.Size = new System.Drawing.Size(141, 60);
+            this.Button_export_products.Size = new System.Drawing.Size(193, 60);
             this.Button_export_products.TabIndex = 0;
             this.Button_export_products.Text = "EXPORT";
             this.Button_export_products.UseVisualStyleBackColor = true;
@@ -1677,7 +1677,7 @@ namespace Alkobazar
             this.Button_import_products.Location = new System.Drawing.Point(4, 4);
             this.Button_import_products.Margin = new System.Windows.Forms.Padding(4);
             this.Button_import_products.Name = "Button_import_products";
-            this.Button_import_products.Size = new System.Drawing.Size(141, 59);
+            this.Button_import_products.Size = new System.Drawing.Size(193, 59);
             this.Button_import_products.TabIndex = 1;
             this.Button_import_products.Text = "IMPORT";
             this.Button_import_products.UseVisualStyleBackColor = true;
@@ -1692,7 +1692,7 @@ namespace Alkobazar
             this.label_size_in_liters.Location = new System.Drawing.Point(4, 77);
             this.label_size_in_liters.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_size_in_liters.Name = "label_size_in_liters";
-            this.label_size_in_liters.Size = new System.Drawing.Size(149, 20);
+            this.label_size_in_liters.Size = new System.Drawing.Size(201, 20);
             this.label_size_in_liters.TabIndex = 6;
             this.label_size_in_liters.Text = "Size in liters";
             // 
@@ -1705,7 +1705,7 @@ namespace Alkobazar
             this.label_price.Location = new System.Drawing.Point(4, 110);
             this.label_price.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_price.Name = "label_price";
-            this.label_price.Size = new System.Drawing.Size(149, 20);
+            this.label_price.Size = new System.Drawing.Size(201, 20);
             this.label_price.TabIndex = 11;
             this.label_price.Text = "Price";
             // 
@@ -1718,7 +1718,7 @@ namespace Alkobazar
             this.label_product_description.Location = new System.Drawing.Point(4, 142);
             this.label_product_description.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_product_description.Name = "label_product_description";
-            this.label_product_description.Size = new System.Drawing.Size(149, 20);
+            this.label_product_description.Size = new System.Drawing.Size(201, 20);
             this.label_product_description.TabIndex = 12;
             this.label_product_description.Text = "Description";
             // 
@@ -1731,7 +1731,7 @@ namespace Alkobazar
             this.label_quantity_in_stock.Location = new System.Drawing.Point(4, 176);
             this.label_quantity_in_stock.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_quantity_in_stock.Name = "label_quantity_in_stock";
-            this.label_quantity_in_stock.Size = new System.Drawing.Size(149, 20);
+            this.label_quantity_in_stock.Size = new System.Drawing.Size(201, 20);
             this.label_quantity_in_stock.TabIndex = 13;
             this.label_quantity_in_stock.Text = "Quantity in stock";
             // 
@@ -1746,13 +1746,13 @@ namespace Alkobazar
             this.tableLayoutPanel2.Controls.Add(this.Button_clear_products, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.Button_update_products, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.Button_delete_products, 0, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(161, 208);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(213, 208);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(244, 123);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(329, 123);
             this.tableLayoutPanel2.TabIndex = 17;
             // 
             // Button_add_products
@@ -1762,7 +1762,7 @@ namespace Alkobazar
             this.Button_add_products.Location = new System.Drawing.Point(4, 4);
             this.Button_add_products.Margin = new System.Windows.Forms.Padding(4);
             this.Button_add_products.Name = "Button_add_products";
-            this.Button_add_products.Size = new System.Drawing.Size(114, 53);
+            this.Button_add_products.Size = new System.Drawing.Size(156, 53);
             this.Button_add_products.TabIndex = 8;
             this.Button_add_products.Text = "Add";
             this.Button_add_products.UseVisualStyleBackColor = true;
@@ -1772,10 +1772,10 @@ namespace Alkobazar
             // 
             this.Button_clear_products.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button_clear_products.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Button_clear_products.Location = new System.Drawing.Point(126, 65);
+            this.Button_clear_products.Location = new System.Drawing.Point(168, 65);
             this.Button_clear_products.Margin = new System.Windows.Forms.Padding(4);
             this.Button_clear_products.Name = "Button_clear_products";
-            this.Button_clear_products.Size = new System.Drawing.Size(114, 54);
+            this.Button_clear_products.Size = new System.Drawing.Size(157, 54);
             this.Button_clear_products.TabIndex = 13;
             this.Button_clear_products.Text = "Clear fields";
             this.Button_clear_products.UseVisualStyleBackColor = true;
@@ -1785,10 +1785,10 @@ namespace Alkobazar
             // 
             this.Button_update_products.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button_update_products.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Button_update_products.Location = new System.Drawing.Point(126, 4);
+            this.Button_update_products.Location = new System.Drawing.Point(168, 4);
             this.Button_update_products.Margin = new System.Windows.Forms.Padding(4);
             this.Button_update_products.Name = "Button_update_products";
-            this.Button_update_products.Size = new System.Drawing.Size(114, 53);
+            this.Button_update_products.Size = new System.Drawing.Size(157, 53);
             this.Button_update_products.TabIndex = 12;
             this.Button_update_products.Text = "Update";
             this.Button_update_products.UseVisualStyleBackColor = true;
@@ -1801,7 +1801,7 @@ namespace Alkobazar
             this.Button_delete_products.Location = new System.Drawing.Point(4, 65);
             this.Button_delete_products.Margin = new System.Windows.Forms.Padding(4);
             this.Button_delete_products.Name = "Button_delete_products";
-            this.Button_delete_products.Size = new System.Drawing.Size(114, 54);
+            this.Button_delete_products.Size = new System.Drawing.Size(156, 54);
             this.Button_delete_products.TabIndex = 10;
             this.Button_delete_products.Text = "Delete";
             this.Button_delete_products.UseVisualStyleBackColor = true;
@@ -1810,33 +1810,33 @@ namespace Alkobazar
             // text_quantity_in_stock
             // 
             this.text_quantity_in_stock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.text_quantity_in_stock.Location = new System.Drawing.Point(161, 175);
+            this.text_quantity_in_stock.Location = new System.Drawing.Point(213, 175);
             this.text_quantity_in_stock.Margin = new System.Windows.Forms.Padding(4);
             this.text_quantity_in_stock.Name = "text_quantity_in_stock";
-            this.text_quantity_in_stock.Size = new System.Drawing.Size(244, 22);
+            this.text_quantity_in_stock.Size = new System.Drawing.Size(329, 22);
             this.text_quantity_in_stock.TabIndex = 16;
             // 
             // text_product_name
             // 
             this.text_product_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.text_product_name.Location = new System.Drawing.Point(161, 6);
+            this.text_product_name.Location = new System.Drawing.Point(213, 6);
             this.text_product_name.Margin = new System.Windows.Forms.Padding(4);
             this.text_product_name.Name = "text_product_name";
-            this.text_product_name.Size = new System.Drawing.Size(244, 22);
+            this.text_product_name.Size = new System.Drawing.Size(329, 22);
             this.text_product_name.TabIndex = 1;
             // 
             // text_size_in_liters
             // 
-            this.text_size_in_liters.Location = new System.Drawing.Point(160, 74);
+            this.text_size_in_liters.Location = new System.Drawing.Point(212, 74);
             this.text_size_in_liters.Name = "text_size_in_liters";
-            this.text_size_in_liters.Size = new System.Drawing.Size(246, 22);
+            this.text_size_in_liters.Size = new System.Drawing.Size(331, 22);
             this.text_size_in_liters.TabIndex = 18;
             // 
             // text_alcohol_content
             // 
-            this.text_alcohol_content.Location = new System.Drawing.Point(160, 38);
+            this.text_alcohol_content.Location = new System.Drawing.Point(212, 38);
             this.text_alcohol_content.Name = "text_alcohol_content";
-            this.text_alcohol_content.Size = new System.Drawing.Size(246, 22);
+            this.text_alcohol_content.Size = new System.Drawing.Size(330, 22);
             this.text_alcohol_content.TabIndex = 19;
             // 
             // Grid_products
@@ -1866,7 +1866,7 @@ namespace Alkobazar
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Grid_products.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.Grid_products.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grid_products.Size = new System.Drawing.Size(879, 678);
+            this.Grid_products.Size = new System.Drawing.Size(1174, 707);
             this.Grid_products.TabIndex = 12;
             this.Grid_products.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_products_CellContentClick);
             // 
@@ -1935,7 +1935,7 @@ namespace Alkobazar
             this.tab_extras.Location = new System.Drawing.Point(2, 1);
             this.tab_extras.Name = "tab_extras";
             this.tab_extras.SelectedIndex = 0;
-            this.tab_extras.Size = new System.Drawing.Size(1318, 721);
+            this.tab_extras.Size = new System.Drawing.Size(1750, 750);
             this.tab_extras.TabIndex = 1;
             // 
             // productsTableAdapter
@@ -1962,9 +1962,10 @@ namespace Alkobazar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1314, 718);
+            this.ClientSize = new System.Drawing.Size(1737, 739);
             this.Controls.Add(this.tab_extras);
             this.Name = "AlkoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
