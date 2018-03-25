@@ -11,7 +11,8 @@ namespace Alkobazar.model
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class customer
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,10 +22,14 @@ namespace Alkobazar.model
         }
     
         public int id { get; set; }
+        [Required(ErrorMessage = "company_name must not be empty !")]
         public string company_name { get; set; }
+
+        [Required(ErrorMessage = "shipment_address must not be empty !")]
         public string shipment_address { get; set; }
+
+        [Required(ErrorMessage = "customer_phone must not be empty !")]
         public string customer_phone { get; set; }
-    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<order> orders { get; set; }
     }

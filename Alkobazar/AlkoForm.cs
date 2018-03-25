@@ -499,7 +499,8 @@ namespace Alkobazar
 
             if (_index >= 0)
             {
-                int order_id = Convert.ToInt32(Grid_orders.Rows[_index].Cells[0].Value);
+                    int order_id = Convert.ToInt32(Grid_orders.Rows[_index].Cells[0].Value);
+
                 Double total_sum = 0;
                 int total_quantity = 0;
                 int yPoint = 240;
