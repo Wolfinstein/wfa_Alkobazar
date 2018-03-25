@@ -554,17 +554,23 @@ namespace Alkobazar
                     yPoint = yPoint + 5;
                     gfx.DrawString(total_sum.ToString(), font_regular, XBrushes.Black, new XRect(460, yPoint, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
 
-                    string filename = "INVOICE_" + db.orders.Where(o => o.id == order_id).First().order_number.ToString();
-
-                    try
+                    SaveFileDialog sfd = new SaveFileDialog
                     {
-                        document.Save(filename);
-                        Process.Start(filename);
-                    }
-                    catch (Exception ex)
+                        Filter = "PDF (*.pdf)|*.pdf",
+                        FileName = "Output.pdf"
+                    };
+                    if (sfd.ShowDialog() == DialogResult.OK)
                     {
-                        Console.Write(ex.Message);
-                        MessageBox.Show("You cannot generate invoice unless previous one Is closed !");
+                        try
+                        {
+                            document.Save(sfd.FileName);
+                            this.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.Write(ex.Message);
+                            MessageBox.Show("You cannot generate raport unless previous one is closed !");
+                        }
                     }
                 }
             }
